@@ -2,13 +2,14 @@ import React from 'react';
 import '../auth/custom.css'
 import hrmLogo from '../assets/hrm logo.JPG'
 
-const Register = () => {
+const CompanyRegister = () => {
   return (
     <div>
     <div className="logo">
       <img src={hrmLogo} alt=""/>
+      <h1>Proxima HR</h1>
     </div>
-    <div className="name">Proxima HR</div>
+  
       <div className="container">
         <div className="text">Register Company</div>
         <div className="inputs">
@@ -19,27 +20,27 @@ const Register = () => {
             </div>
             <div className="right-input">
                 <label htmlFor="text">Company ID</label>
-                <input type="text" placeholder='Enter company Name'/>
+                <input type="text" placeholder='Enter company ID'/>
             </div>
           </div>
           <div className="input-1">
           <div className="left-input">
                 <label htmlFor="text">Industry</label>
-                <input type="text" placeholder='Enter company Name'/>
+                <input type="text" placeholder='Enter Industry Name'/>
             </div>
             <div className="right-input">
                 <label htmlFor="text">Country</label>
-                <input type="text" placeholder='Enter company Name'/>
+                <input type="text" placeholder='Enter country Name'/>
             </div>
           </div>
           <div className="input-1">
           <div className="left-input">
                 <label htmlFor="text">State</label>
-                <input type="text" placeholder='Enter company Name'/>
+                <input type="text" placeholder='Enter state Name'/>
             </div>
             <div className="right-input">
                 <label htmlFor="text">Town</label>
-                <input type="text" placeholder='Enter company Name'/>
+                <input type="text" placeholder='Enter Town Name'/>
             </div>
           </div>
           <div className="input-2">
@@ -53,4 +54,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default CompanyRegister
