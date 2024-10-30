@@ -26,10 +26,9 @@ const HRsignup = () => {
           </div>
         <div className="button">Login</div>
         <div className="login">
-          <h1>Don't have an account?<Link to="/signup"><span>Signup</span></Link></h1>
+          <h1>Don't have an account?<Link to="/register"><span>Signup</span></Link></h1>
           </div>
         </div>
-
       </div>
   )
 }

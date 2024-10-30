@@ -1,6 +1,7 @@
 import React from 'react'
 import '../auth/custom.css'
 import hrmLogo from '../assets/hrm logo.JPG'
+import { Link } from 'react-router-dom';
 
 const HRregister = () => {
   return (
@@ -25,17 +26,17 @@ const HRregister = () => {
           </div>
           <div className="input-2">
             <label htmlFor="text">Role</label>
-            <input type="text" placeholder='Enter Role' />
+            <input type="text" placeholder='Enter Role'/>
           </div>
 
           <div className="input-2">
             <label htmlFor="text">Email</label>
-            <input type="email" placeholder='Enter Email' />
+            <input type="email" placeholder='Enter Email'/>
           </div>
 
           <div className="input-2">
             <label htmlFor="text">password</label>
-            <input type="password" placeholder='Enter password' />
+            <input type="password" placeholder='Enter password'/>
           </div>
 
           <div className="input-2">
@@ -45,7 +46,7 @@ const HRregister = () => {
         </div>
         <div className="button">Create an account</div>
         <div className="login">
-          <h1>Already have an account?<span>Log in</span></h1>
+          <h1>Already have an account?<Link to="/signup"><span>Log in</span></Link></h1>
           </div>
       </div>
     </div>
