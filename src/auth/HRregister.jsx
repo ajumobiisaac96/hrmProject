@@ -46,7 +46,7 @@ const HRregister = () => {
         </div>
         <div className="button">Create an account</div>
         <div className="login">
-          <h1>Already have an account?<Link to="/signup"><span>Log in</span></Link></h1>
+          <h1>Already have an account?<Link to="/login"><span>Log in</span></Link></h1>
           </div>
       </div>
     </div>

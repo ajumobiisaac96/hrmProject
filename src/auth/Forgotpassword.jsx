@@ -3,16 +3,19 @@ import '../auth/custom.css'
 import hrmLogo from '../assets/hrm logo.JPG'
 import { Link } from 'react-router-dom';
 
-const HRsignup = () => {
+const Forgotpassword = () => {
   return (
     <div>
         <div className="logo">
             <img src={hrmLogo} alt=""/>
             <h1>Proxima HR</h1>
         </div>
-
         <div className="container">
-        <div className="text">Login to Your Dashboard </div>
+        <div className="text">Forgot Your Password ? </div>
+        <div className="info">
+            <p>Enter your email address below and we'll send you a
+            code to log in and reset your passsword.</p>
+        </div>
         <div className="inputs">
           </div>
           <div className="input-2">
@@ -20,17 +23,13 @@ const HRsignup = () => {
             <input type="email" placeholder='Enter Email' />
           </div>
 
-          <div className="input-2">
-            <label htmlFor="text">password</label>
-            <input type="password" placeholder='Enter password' />
-          </div>
-        <div className="button">Login</div>
+        <div className="button">Send Code</div>
         <div className="login">
-          <h1>Don't have an account?<Link to="/register"><span>Signup</span></Link></h1>
+          <h1>Remember your Password?<Link to="/login"><span>Login</span></Link></h1>
           </div>
         </div>
-      </div>
+    </div>
   )
 }
 
-export default HRsignup
+export default Forgotpassword
