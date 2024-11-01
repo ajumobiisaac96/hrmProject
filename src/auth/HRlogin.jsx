@@ -27,7 +27,7 @@ const HRlogin = () => {
             </div>
             <input type="password" placeholder='Enter password' />
           </div>
-        <div className="button">Login</div>
+        <button>Login</button>
         <div className="login">
           <h1>Don't have an account?<Link to="/register"><span>Signup</span></Link></h1>
           </div>

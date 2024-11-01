@@ -44,7 +44,7 @@ const HRregister = () => {
             <input type="text" placeholder='Enter Company Email' />
           </div>
         </div>
-        <div className="button">Create an account</div>
+        <button>Create an account</button>
         <div className="login">
           <h1>Already have an account?<Link to="/login"><span>Log in</span></Link></h1>
           </div>

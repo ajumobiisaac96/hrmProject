@@ -1,35 +1,48 @@
-import React from 'react'
-import '../auth/custom.css'
-import hrmLogo from '../assets/hrm logo.JPG'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';  
+import '../auth/custom.css';
+import hrmLogo from '../assets/hrm logo.JPG';
 
 const Forgotpassword = () => {
+  const navigate = useNavigate();  
+
+  
+  const handleSendCode = (e) => {
+    e.preventDefault();  
+    navigate('/verifyemail');  
+  };
+
   return (
     <div>
-        <div className="logo">
-            <img src={hrmLogo} alt=""/>
-            <h1>Proxima HR</h1>
-        </div>
-        <div className="container">
-        <div className="text">Forgot Your Password ? </div>
+      <div className="logo">
+        <img src={hrmLogo} alt=""/>
+        <h1>Proxima HR</h1>
+      </div>
+      <div className="container">
+        <div className="text">Forgot Your Password ?</div>
         <div className="info">
-            <p>Enter your email address below and we'll send you a
-            code to log in and reset your passsword.</p>
+          <p>Enter your email address below and we'll send you a
+            code to log in and reset your password.</p>
         </div>
-        <div className="inputs">
-          </div>
+        <form>
+          <div className="inputs"></div>
           <div className="input-2">
             <label htmlFor="text">Email</label>
-            <input type="email" placeholder='Enter Email' />
+            <input type="email" placeholder='Enter Email' required />
           </div>
 
-        <div className="button">Send Code</div>
+ 
+          <button onClick={handleSendCode}>Send Code</button>
+        </form>
+
         <div className="login">
-          <h1>Remember your Password?<Link to="/login"><span>Login</span></Link></h1>
-          </div>
+          <h1>Remember your Password?
+            <Link to="/login"><span>Login</span></Link>
+          </h1>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Forgotpassword
+export default Forgotpassword;

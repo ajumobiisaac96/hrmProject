@@ -93,6 +93,11 @@
     margin-top: 8px;
   }
 
+  .input-1 input:focus{
+    outline: none;
+    border: 1px solid #007BFF;
+  }
+
   .input-1 ::placeholder{
     font-family: Inter;
     font-size: 14px;
@@ -126,14 +131,21 @@
     background-color: #F1F0EE;
     border: none;
     margin-top: 8px;
+ 
   }
 
-  .button{
+  .input-2 input:focus{
+    outline: none;
+    border: 1px solid #007BFF;
+  }
+
+  button{
     width: 379px;
     height: 36px;
     padding: 4px;
     gap: 4px;
     border-radius: 8px;
+    border: 1px;
     background-color:#007BFF;
     font-family: Inter;
     font-size: 16px;
@@ -148,7 +160,7 @@
     cursor: pointer;
   }
 
-  .button:hover{
+  button:hover{
     width: 380px;
     height: 38px;
     transition: 0.2s;
