@@ -48,7 +48,7 @@ const CompanyRegister = () => {
             <input type="text" placeholder='Enter Company Email' />
           </div>
         </div>
-        <div className="button">Register Company</div>
+        <button>Register Company</button>
       </div>
     </div>
   )
