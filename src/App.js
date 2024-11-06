@@ -6,6 +6,7 @@ import HRlogin from './auth/HRlogin.jsx';
 import Forgotpassword from './auth/Forgotpassword.jsx';
 import Verifyemail from './auth/Verifyemail.jsx';
 
+
 function App() {
   return (
     <Router>
