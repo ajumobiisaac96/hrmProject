@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../auth/custom.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
@@ -9,82 +9,86 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import hrmLogo from '../assets/hrm logo.JPG';
 import { Link } from 'react-router-dom';
 
+// Adding FontAwesome icons
 library.add(fas, far, fab);
 
 const CompanyRegister = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [formData, setFormData] = useState({
-    companyName: '',
-    companyId: '',
+    registration_number: '',
+    name: '',
+    email: '',
     industry: '',
     country: '',
     state: '',
     town: '',
-    email: '',
   });
   const [message, setMessage] = useState('');
 
+  // Helper to check if the form is valid
+  const isFormValid = Object.values(formData).every((value) => value.trim() !== '');
+
+  // Handle input field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleRegisterClick = async () => {
-    try {
-      const response = await axios.post(
-        'https://proximahr.onrender.com/company/register_company',
-        formData,
-        { headers: { 'Content-Type': 'application/json' } }
-      );
-  
-      if (response.status === 200 || response.status === 201) {
-        setPopupVisible(true); // Show the success popup only if registration is successful
-        setMessage('Company registration successful!');
-      } else {
-        setMessage('Unexpected response from server. Please try again.');
-      }
-    } catch (error) {
-      console.error('Registration failed:', error);
-      setMessage('Error registering company. Please try again.');
+    if (!isFormValid) {
+      setMessage('Please fill out all fields');
+      return;
     }
+  
+    // Mock the API response (simulate a successful registration)
+    setTimeout(() => {
+      setPopupVisible(true);
+      setMessage(''); // Clear any error message
+    }, 1000); // Simulates a 1-second delay as if you're waiting for the server's response
   };
+  
   
 
   return (
     <div>
+      {/* Logo Section */}
       <div className="logo">
-        <img src={hrmLogo} alt="" />
+        <img src={hrmLogo} alt="HRM Logo" />
         <h1>Proxima HR</h1>
       </div>
 
+      {/* Form Container with conditional blur effect */}
       <div className={`container ${isPopupVisible ? 'blur' : ''}`}>
         <div className="text">Register Company</div>
         <div className="inputs">
+          {/* Company Name and ID */}
           <div className="input-1">
             <div className="left-input">
-              <label htmlFor="text">Company Name</label>
+              <label htmlFor="name">Company Name</label>
               <input
                 type="text"
-                name="companyName"
+                name="name"
                 placeholder="Enter company Name"
-                value={formData.companyName}
+                value={formData.name}
                 onChange={handleChange}
               />
             </div>
             <div className="right-input">
-              <label htmlFor="text">Company ID</label>
+              <label htmlFor="registration_number">Company ID</label>
               <input
                 type="text"
-                name="companyId"
+                name="registration_number"
                 placeholder="Enter company ID"
-                value={formData.companyId}
+                value={formData.registration_number}
                 onChange={handleChange}
               />
             </div>
           </div>
+
+          {/* Industry and Country */}
           <div className="input-1">
             <div className="left-input">
-              <label htmlFor="text">Industry</label>
+              <label htmlFor="industry">Industry</label>
               <input
                 type="text"
                 name="industry"
@@ -94,7 +98,7 @@ const CompanyRegister = () => {
               />
             </div>
             <div className="right-input">
-              <label htmlFor="text">Country</label>
+              <label htmlFor="country">Country</label>
               <input
                 type="text"
                 name="country"
@@ -104,9 +108,11 @@ const CompanyRegister = () => {
               />
             </div>
           </div>
+
+          {/* State and Town */}
           <div className="input-1">
             <div className="left-input">
-              <label htmlFor="text">State</label>
+              <label htmlFor="state">State</label>
               <input
                 type="text"
                 name="state"
@@ -116,7 +122,7 @@ const CompanyRegister = () => {
               />
             </div>
             <div className="right-input">
-              <label htmlFor="text">Town</label>
+              <label htmlFor="town">Town</label>
               <input
                 type="text"
                 name="town"
@@ -126,8 +132,10 @@ const CompanyRegister = () => {
               />
             </div>
           </div>
+
+          {/* Email Input */}
           <div className="input-2">
-            <label htmlFor="text">Company Email</label>
+            <label htmlFor="email">Company Email</label>
             <input
               type="email"
               name="email"
@@ -137,10 +145,13 @@ const CompanyRegister = () => {
             />
           </div>
         </div>
+
+        {/* Registration Button */}
         <button onClick={handleRegisterClick}>Register Company</button>
         {message && <p>{message}</p>}
       </div>
 
+      {/* Success Popup */}
       {isPopupVisible && (
         <div className="container-2">
           <FontAwesomeIcon icon={faCircleCheck} className="check-icon" />

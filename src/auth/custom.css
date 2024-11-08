@@ -29,11 +29,14 @@
   .container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #FFFFFF;
     width: 420px;
     border-radius: 8px; 
-    margin-left: 470px; 
-    position: relative;  
+    margin: 0 auto;
+    /* margin-left: 470px;  */
+    /* position: relative;   */
   }
 
   .text{
@@ -299,3 +302,44 @@
 .blur {
   filter: blur(5px);
 }
+
+/* 
+@media (max-width: 640px) {
+
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img{
+    width: 30px;
+  }
+
+  .logo h1{
+    font-size: 18px;
+  }
+
+  .container{
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .inputs{
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .left-input{
+    width: 150px;
+  }
+
+  .right-input{
+    width: 150px;
+  }
+
+  .input-1 input{
+    width: 150px;
+  }
+
+} */
