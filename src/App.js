@@ -1,10 +1,10 @@
-import './auth/custom.css';
+import './styles/custom.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import HRregister from './auth/HRregister.jsx';
-import CompanyRegister from './auth/CompanyRegister.jsx';
-import HRlogin from './auth/HRlogin.jsx';
-import Forgotpassword from './auth/Forgotpassword.jsx';
-import Verifyemail from './auth/Verifyemail.jsx';
+import HRregister from './pages/auth/HRregister.jsx';
+import CompanyRegister from './pages/auth/CompanyRegister.jsx';
+import HRlogin from './pages/auth/HRlogin.jsx';
+import Forgotpassword from './pages/auth/Forgotpassword.jsx';
+import Verifyemail from './pages/auth/Verifyemail.jsx';
 
 
 function App() {

@@ -29,14 +29,12 @@
   .container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     background-color: #FFFFFF;
     width: 420px;
     border-radius: 8px; 
     margin: 0 auto;
-    /* margin-left: 470px;  */
-    /* position: relative;   */
   }
 
   .text{

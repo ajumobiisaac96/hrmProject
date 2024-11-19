@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../auth/custom.css';
-import hrmLogo from '../assets/hrm logo.JPG';
+import '../../styles/custom.css';
+import hrmLogo from '../../assets/hrm logo.JPG';
 
 const Forgotpassword = () => {
   const [email, setEmail] = useState('');  // State for email input

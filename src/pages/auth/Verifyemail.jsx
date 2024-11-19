@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';  // Import useLocation
-import '../auth/custom.css';
-import hrmLogo from '../assets/hrm logo.JPG';
+import '../../styles/custom.css';
+import hrmLogo from '../../assets/hrm logo.JPG';
 
 const Verifyemail = () => {
   const location = useLocation();
