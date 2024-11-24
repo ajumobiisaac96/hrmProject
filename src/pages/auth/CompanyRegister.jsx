@@ -54,8 +54,9 @@ const CompanyRegister = () => {
 
           if (registration_number) {
             // Store in localStorage
-            localStorage.setItem('companyID', registration_number);
-            console.log("Company ID (from response):", registration_number);
+            localStorage.removeItem('companyID');
+            localStorage.setItem('company_id', registration_number);
+            console.log("Company_id (from response):", registration_number);
           } else {
             console.error("No registration number received from the API!");
           }

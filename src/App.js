@@ -5,6 +5,7 @@ import CompanyRegister from './pages/auth/CompanyRegister.jsx';
 import HRlogin from './pages/auth/HRlogin.jsx';
 import Forgotpassword from './pages/auth/Forgotpassword.jsx';
 import Verifyemail from './pages/auth/Verifyemail.jsx';
+import ConfirmPassword from './pages/auth/ConfirmPassword.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/login" element={<HRlogin />} />
           <Route path="/forgotpassword" element={<Forgotpassword />} />
           <Route path="/verifyemail" element={<Verifyemail/>} />
+          <Route path="/confirmPassword" element={<ConfirmPassword/>} />
         </Routes>
       </div>
     </Router>

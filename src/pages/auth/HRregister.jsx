@@ -1,61 +1,3 @@
-// import React from 'react'
-// import '../../styles/custom.css';
-// import hrmLogo from '../../assets/hrm logo.JPG';
-// import { Link } from 'react-router-dom';
-
-// const HRregister = () => {
-//   return (
-//     <div>
-//         <div className="logo">
-//             <img src={hrmLogo} alt=""/>
-//             <h1>Proxima HR</h1>
-//         </div>
-
-//         <div className="container">
-//         <div className="text">Build Your Team with Ease </div>
-//         <div className="inputs">
-//           <div className="input-1">
-//           <div className="left-input">
-//                 <label htmlFor="text">First Name</label>
-//                 <input type="text" placeholder='Enter First Name'/>
-//             </div>
-//             <div className="right-input">
-//                 <label htmlFor="text">Last Name</label>
-//                 <input type="text" placeholder='Enter Last Name'/>
-//             </div>
-//           </div>
-//           <div className="input-2">
-//             <label htmlFor="text">Role</label>
-//             <input type="text" placeholder='Enter Role'/>
-//           </div>
-
-//           <div className="input-2">
-//             <label htmlFor="text">Email</label>
-//             <input type="email" placeholder='Enter Email'/>
-//           </div>
-
-//           <div className="input-2">
-//             <label htmlFor="text">password</label>
-//             <input type="password" placeholder='Enter password'/>
-//           </div>
-
-//           <div className="input-2">
-//             <label htmlFor="text">Company Verification code</label>
-//             <input type="text" placeholder='Enter Company Verification code' name = "admin_code" /> 
-//           </div>
-//         </div>
-//         <button>Create an account</button>
-//         <div className="login">
-//           <h1>Already have an account?<Link to="/login"><span>Log in</span></Link></h1>
-//           </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default HRregister
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../../styles/custom.css';
@@ -87,29 +29,38 @@ const HRregister = () => {
     setSuccessMessage('');
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Basic validation
     const { first_name, last_name, role, email, password, admin_code } = formData;
     if (!first_name || !last_name || !role || !email || !password || !admin_code) {
       setErrorMessage('All fields are required.');
       return;
     }
-
-    // Submit form data
+  
+    // Get company_id from local storage
+    const company_id = localStorage.getItem('company_id').trim(); // Remove any spaces
+    console.log(company_id);
+  
+    // Submit form data with company_id as a query parameter
     axios
-      .post('https://proximahr.onrender.com/admin/create-admin', formData)
+      .post(`https://proximahr.onrender.com/admin/create-admin?company_id=${company_id}`, formData)
       .then((response) => {
-        console.log('Response:', response.data);
+        console.log('Response from backend:', response); // Log the entire response object
+  
+        // If you want to log just the response data, you can do this:
+        console.log('Response data:', response.data);
+  
+        // Handle success response
         setSuccessMessage('Team created successfully! You will be redirected to the login page.');
-
+  
         // Redirect to the login page after 2 seconds
         setTimeout(() => {
           navigate('/login');
         }, 2000);
-
+  
+        // Clear form data
         setFormData({
           first_name: '',
           last_name: '',
@@ -120,10 +71,11 @@ const HRregister = () => {
         });
       })
       .catch((error) => {
-        console.error('Error:', error);
-        setErrorMessage('Failed to create the team. Please check your details and try again.');
+        console.error('Error details:', error.response || error.message);
+        setErrorMessage('Failed to connect to the server. Please try again later.');
       });
   };
+  
 
   return (
     <div>
