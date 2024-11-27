@@ -102,7 +102,7 @@ const ResetPassword = () => {
             />
           </div>
           {error && (
-            <p style={{ color: 'red' }} aria-live="assertive">
+            <p className= 'setError' p style={{ color: 'red'}} aria-live="assertive">
               {error}
             </p>
           )}

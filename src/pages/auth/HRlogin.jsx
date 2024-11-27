@@ -1,45 +1,3 @@
-// import React from 'react'
-// import '../../styles/custom.css';
-// import hrmLogo from '../../assets/hrm logo.JPG';
-// import { Link } from 'react-router-dom';
-
-// const HRlogin = () => {
-//   return (
-//     <div>
-//         <div className="logo">
-//             <img src={hrmLogo} alt=""/>
-//             <h1>Proxima HR</h1>
-//         </div>
-
-//         <div className="container">
-//         <div className="text">Login to Your Dashboard </div>
-//         <div className="inputs">
-//         <div className="input-2">
-//             <label htmlFor="text">Email</label>
-//             <input type="email" placeholder='Enter Email' name="username" />
-//           </div>
-
-//           <div className="input-2">
-//             <div className="forgotpassword">
-//             <label htmlFor="text">password</label>
-//             <Link to="/forgotpassword"><p>Forgot Password?</p></Link>
-//             </div>
-//             <input type="password" placeholder='Enter password' />
-//           </div>
-//         </div>
-          
-//         <button>Login</button>
-//         <div className="login">
-//           <h1>Don't have an account?<Link to="/register"><span>Signup</span></Link></h1>
-//           </div>
-//         </div>
-//       </div>
-//   )
-// }
-
-// export default HRlogin
-
-
 import React, { useState } from 'react';
 import '../../styles/custom.css'; // Keep your custom styles
 import hrmLogo from '../../assets/hrm logo.JPG'; // Ensure logo path is correct
@@ -49,6 +7,7 @@ import axios from 'axios';
 const HRlogin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate(); // Initialize the navigate function
 
   const handleSubmit = async (e) => {
@@ -56,7 +15,7 @@ const HRlogin = () => {
 
   const companyId = localStorage.getItem('company_id'); // Retrieve company_id from local storage
   if (!companyId) {
-    alert('Company ID not found. Please log in again.');
+    setError('Company ID not found. Please log in again.');
     return;
   }
 
@@ -84,18 +43,16 @@ const HRlogin = () => {
   } catch (error) {
     if (error.response) {
       console.error('Backend responded with error:', error.response.data);
-      alert(`Login failed: ${error.response.data.message || 'Unknown error'}`);
+      setError('Incorrect email or password. Please try again.');
     } else {
       console.error('Request failed:', error);
-      alert('Login failed. Please try again.');
+      setError('Incorrect email or password. Please try again.');
     }
   }
 };
 
-
-
   
-  return (
+return (
     <div>
       <div className="logo">
         <img src={hrmLogo} alt="HRM Logo" />
@@ -135,6 +92,8 @@ const HRlogin = () => {
           </div>
           <button type="submit">Login</button>
         </form>
+
+        <div className="setError">{error}</div>
 
         <div className="login">
           <h1>

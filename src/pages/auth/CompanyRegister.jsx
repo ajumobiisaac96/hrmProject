@@ -47,7 +47,7 @@ const CompanyRegister = () => {
       .then((response) => {
         console.log("Full Response:", response.data); // Log the entire response
 
-        const { message, data } = response.data;
+        const {data } = response.data;
 
         if (data && data.length > 0) {
           const registration_number = data[0].registration_number; // Access registration_number from the first item in the array
@@ -64,7 +64,7 @@ const CompanyRegister = () => {
           console.error("No data array found or it's empty!");
         }
 
-        setPopupMessage(message || 'Company registration successful!');
+        setPopupMessage('A code has been sent to your email to create your admin account');
         setShowPopup(true);
         setErrorMessage('');
       })
@@ -165,8 +165,9 @@ const CompanyRegister = () => {
             </div>
           </div>
           <button type="submit">Register Company</button>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
         </form>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        
       </div>
 
       {/* Success Popup */}
@@ -174,7 +175,7 @@ const CompanyRegister = () => {
         <div className="container-2">
           <FontAwesomeIcon icon={faCircleCheck} className="check-icon" />
           <div className="pop-up-txt">
-            <h1>Company Registration Status</h1>
+            <h1>Company Registration Sucessful</h1>
             <p>{popupMessage}</p>
             <Link to="/register">
               <h3>Create a Proxima HR account</h3>
