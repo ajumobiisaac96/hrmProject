@@ -7,7 +7,7 @@ import Forgotpassword from './pages/auth/Forgotpassword.jsx';
 import Verifyemail from './pages/auth/Verifyemail.jsx';
 import ConfirmPassword from './pages/auth/ConfirmPassword.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-// import Sidebar from './components/Sidebar.jsx';
+import EmployeeManagment from './pages/EmployeeManagment.jsx';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/verifyemail" element={<Verifyemail/>} />
           <Route path="/confirmPassword" element={<ConfirmPassword/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
-          {/* <Route path="/Sidebar" element={<Sidebar/>} /> */}
+          <Route path="/EmployeeManagment" element={<EmployeeManagment/>} />
 
         </Routes>
       </div>
