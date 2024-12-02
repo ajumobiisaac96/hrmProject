@@ -80,4 +80,31 @@ hr{
     padding-left: 20px;
 }
 
+.side-bar{
+    text-decoration: none;
+}
 
+.side-bar:visited{
+        color: #2E2E2E;
+}
+
+.side-bar {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .side-bar.active {
+    background-color: #f0f0f0;
+    color: #007bff;
+    font-weight: 400;
+    background-color: #E0ECFE;
+    width: 233px;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
