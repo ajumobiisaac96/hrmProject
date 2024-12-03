@@ -1,53 +1,4 @@
-// import React from 'react'
-// import Sidebar from '../components/Sidebar'
-// import test from '../assets/test.png'
-// import '../pages/EmployeeManagment.css'
-// import '../pages/Dashboard.css'
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { fas} from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// library.add(fas);
-
-// const EmployeeManagment = () => {
-//   return (
-//     <div>
-//       <div className="employee-managment">
-//         <div className="employee-managment-layout">
-//         <Sidebar/>
-//         <div className="slide-one">
-//             <div className="slide-one-1">
-//               <div className="name">
-//                 <h5>Joseph Dooley</h5>
-//                 <h6>Good Morning</h6>
-//               </div> 
-//             </div>
-//             <div className="slide-one-2">
-//               <div className="search">
-//                 <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search' />
-//               </div>
-
-//               <div className="notification">
-//                 <FontAwesomeIcon icon="fa-solid fa-bell" />
-//                 <h6>6</h6>
-//               </div>
-
-//               <div className="user-profile">
-//               <img src={test} alt="My profile" className ="My-profile" />
-//               </div>
-//             </div> 
-//           </div>
-//         </div>
-//       </div>
-
-//     </div>
-//   )
-// }
-
-// export default EmployeeManagment
-
-
-import React from 'react';
+import React, {useState} from 'react';
 import Sidebar from '../components/Sidebar'
 import test from '../assets/test.png'
 import '../pages/Dashboard.css'
@@ -55,10 +6,12 @@ import '../pages/EmployeeManagment.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Link } from 'react-router-dom'
 
 library.add(fas);
 
 const EmployeeManagament = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <div className="main-dashboard">
@@ -101,8 +54,21 @@ const EmployeeManagament = () => {
                 </div>
                 <div className="div-2">
                   <div className="btn-1">
-                    <button><FontAwesomeIcon icon="fa-solid fa-filter" />filter</button>
+                  <button onClick={() => setIsOpen(!isOpen)}>
+                    <FontAwesomeIcon icon="fa-solid fa-filter" /> filter
+                  </button>
+                </div>
+                {isOpen && (
+                  <div className = "dropdownstyle" >
+                    <p>All</p>
+                    <p>Engineering</p>
+                    <p>Design</p>
+                    <p>Marketing</p>
+                    <p>sales</p>
+                    <p>Data science</p>
+                    <p>operations</p>
                   </div>
+                )}
                   <div className="btn">
                       <button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Employee</button>
                   </div>
@@ -135,7 +101,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -164,7 +130,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -193,7 +159,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -222,7 +188,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -253,7 +219,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -282,7 +248,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -311,7 +277,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>
@@ -340,7 +306,7 @@ const EmployeeManagament = () => {
                     <h2>Active</h2>
                   </div>
                   <div className="btn-3">
-                    <button>View Profile</button>
+                  <Link to="/view-profile"><button>View Profile</button></Link>
                   </div>
                 </div>
               </div>

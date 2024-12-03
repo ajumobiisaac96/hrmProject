@@ -22,6 +22,7 @@ const Sidebar = () => {
     { name: "Task Management", icon: "fa-list-check", to: "/TaskManagement" },
     { name: "Notification", icon: "fa-bell", to: "/Notification" },
     { name: "Profile", icon: "fa-user", to: "/Profile" },
+    { name: "Logout", icon: "fa-right-from-bracket", to: "/login", className :"logout"},
   ];
 
   return (
@@ -37,7 +38,8 @@ const Sidebar = () => {
             <Link
               to={item.to}
               key={item.name}
-              className={`side-bar ${location.pathname === item.to ? "active" : ""}`}
+              // className={`side-bar ${location.pathname === item.to ? "active" : ""}`}
+              className={`side-bar ${item.className || ""} ${location.pathname === item.to ? "active" : ""}`}
             >
               <FontAwesomeIcon icon={item.icon} className="icon" /> {item.name}
             </Link>

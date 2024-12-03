@@ -8,6 +8,7 @@
   import ConfirmPassword from './pages/auth/ConfirmPassword.jsx';
   import Dashboard from './pages/Dashboard.jsx';
   import EmployeeManagment from './pages/EmployeeManagment.jsx';
+  import Profile from './pages/Profile.jsx';
 
   function App() {
     return (
@@ -23,6 +24,7 @@
             <Route path="/confirmPassword" element={<ConfirmPassword/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/employee-managment" element={<EmployeeManagment/>} />
+            <Route path="/view-profile" element={<Profile/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
