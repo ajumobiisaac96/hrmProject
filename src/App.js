@@ -9,6 +9,8 @@
   import Dashboard from './pages/Dashboard.jsx';
   import EmployeeManagment from './pages/EmployeeManagment.jsx';
   import Profile from './pages/Profile.jsx';
+  import AddEmployee from './pages/AddEmployee.jsx';
+  import Department from './pages/Department.jsx'
 
   function App() {
     return (
@@ -23,8 +25,10 @@
             <Route path="/verifyemail" element={<Verifyemail/>} />
             <Route path="/confirmPassword" element={<ConfirmPassword/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/department" element={<Department/>} />
             <Route path="/employee-managment" element={<EmployeeManagment/>} />
-            <Route path="/view-profile" element={<Profile/>} />
+            <Route path="/employee-managment/view-profile" element={<Profile/>} />
+            <Route path="/employee-managment/add-employee" element={<AddEmployee/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

@@ -140,7 +140,7 @@ const dashboard = () => {
                       <h5>oct 20, 2024</h5>
                     </div>
                 </div>
-                <button>Manage Task</button>
+                <button>Manage Leave</button>
               </div>
             </div>
 
@@ -178,7 +178,7 @@ const dashboard = () => {
                       <h5>oct 31, 2024</h5>
                     </div>
                 </div>
-                <button>Manage Task</button>
+                <button>Manage Payroll</button>
               </div>
             </div>
 

@@ -17,9 +17,10 @@
     height: auto;  
 }
 
-.logout{
-    color: red;
-  }
+.sidebar .side-bar.logout {
+    color: red !important; 
+}
+  
 
 .side-logo h1{
     font-size: 24px;

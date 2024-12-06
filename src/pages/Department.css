@@ -1,0 +1,146 @@
+.slide-one-1{
+    display: flex;
+    width: 1000px;
+    margin-top: -10px;
+}
+.slide-one-2-1{
+    width: 80px !important;
+    display: flex;
+    margin-left: 300px;
+}
+
+.slide-one{
+    width: 1000px;
+}
+
+
+.div-1{
+    width: 49px;
+    height: 40px;
+    top: 202px;
+    left: 48px;
+    padding: 8px 446px 8px 16px;
+    border-radius: 24px;
+    border: 2px solid #D9D9D9;
+}
+
+.div-1 input{
+    border: none;
+    background-color: transparent;
+}
+
+.div-1 ::placeholder{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #6E6E6E;
+}
+
+.dashboard-details-2-1-1{
+    margin-top: 20px;
+}
+
+.glass-icon{
+    width: 19.52px;
+    height: 19.52px;
+    top: 4px;
+    left: 2px;
+    color: #6E6E6E;
+    margin-right: 10px;
+}
+
+.card-3{
+    width: 486px;
+    height: 387px;
+    border-radius: 16px;
+    border: 2px solid #D9D9D9;
+    padding: 20px;
+}
+
+.new-hr{
+    width: 484px;
+    top: 77px;
+    left: 2px;
+    border: 1px solid #D9D9D9;
+    margin-left: -20px;
+}
+
+.one-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.one-div h1{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.05px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2E2E2E;
+}
+
+.two-div{
+    display: flex;
+    align-items: center;
+}
+
+.two-div img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.two-div p{
+    font-family: Inter;
+font-size: 14px;
+font-weight: 500;
+line-height: 16.94px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #4E4E4E;
+}
+
+.one-div h2{
+    font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 19.36px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #2E2E2E  ;
+}
+
+.three-div{
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: Fixed (52px)px;
+    top: 173px;
+    left: 24px;
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+    border-radius: 16px;
+    border: 2px solid #D9D9D9;
+
+}
+
+.new-div{
+    display: flex;
+    align-items: center;
+}
+
+.new-div-2{
+    display: flex;
+    align-items: center; 
+}

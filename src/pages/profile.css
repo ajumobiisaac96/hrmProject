@@ -66,6 +66,10 @@
     margin-top: 8px;
 }
 
+.employee-info .icon{
+    margin-right: 10px;
+}
+
 .employee-profile-info{
     display: flex;
     width: 1000px;
@@ -74,7 +78,7 @@
 
 .employee-profile-info button{
     margin-left: 0px;
-    width:170px;
+    width:180px;
     height: 40px;
     padding: 8px;
     gap: 8px;
@@ -101,7 +105,7 @@
     color: #DCFCE8;
 }
 
-.dashboard-details-2{
+.dashboard-detail{
     display: flex;
     flex-direction: column;
     width: 1000px;
@@ -111,6 +115,10 @@
     border: 2px solid  #D9D9D9;
     padding: 5px;
     padding-left: 10px;
+}
+
+.compensation{
+    display: none;
 }
 
 .row-1{
@@ -161,5 +169,45 @@
     gap: 8px;
 }
 
+.row-1 .green{
+    color: #22C55E !important;
+}
+
+.compensation .row-1{
+    margin-bottom: 50px;
+}
+
+.red {
+    color: red !important;
+}
 
 
+.employee-profile-info button.active {
+    background-color: #007bff; /* Highlight color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .employee-profile-info button {
+    margin-right: 10px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px ; 
+  }
+
+  .dashboard-detail{
+    height: 300px;
+  }
+
+  .dashboard-details-2-2 .row-1{
+    margin-bottom: 30px;
+  }
+
+  .employee-profile-info button{
+    width: 190px;
+  }

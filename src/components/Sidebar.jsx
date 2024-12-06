@@ -19,7 +19,7 @@ const Sidebar = () => {
     { name: "Leave Management", icon: "fa-calendar", to: "/LeaveManagement" },
     { name: "Payroll Management", icon: "fa-money-bill-1", to: "/PayrollManagement" },
     { name: "Report & Analysis", icon: "fa-chart-line", to: "/ReportAnalysis" },
-    { name: "Task Management", icon: "fa-list-check", to: "/TaskManagement" },
+    // { name: "Task Management", icon: "fa-list-check", to: "/TaskManagement" },
     { name: "Notification", icon: "fa-bell", to: "/Notification" },
     { name: "Profile", icon: "fa-user", to: "/Profile" },
     { name: "Logout", icon: "fa-right-from-bracket", to: "/login", className :"logout"},
@@ -38,8 +38,9 @@ const Sidebar = () => {
             <Link
               to={item.to}
               key={item.name}
-              // className={`side-bar ${location.pathname === item.to ? "active" : ""}`}
-              className={`side-bar ${item.className || ""} ${location.pathname === item.to ? "active" : ""}`}
+              className={`side-bar ${item.className || ""} ${
+                location.pathname.startsWith(item.to) ? "active" : ""
+              }`}
             >
               <FontAwesomeIcon icon={item.icon} className="icon" /> {item.name}
             </Link>
