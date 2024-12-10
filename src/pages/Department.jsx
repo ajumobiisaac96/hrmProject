@@ -48,7 +48,7 @@ const Department = () => {
     
 
               <div className="number-of-employee">
-                <div className="div-1">
+                <div className="new-div-1">
                     <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search Department' />
                 </div>
                 <div className="div-2">
@@ -69,7 +69,7 @@ const Department = () => {
                   </div>
                 )}
                   <div className="btn">
-                      <Link to={"/employee-managment/add-employee"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Department</button></Link>
+                      <Link to={"/department/add-new-department"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Department</button></Link>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const Department = () => {
                 <div className="card-3">
                 <div className="one-div">
                     <div><h1>Engineering</h1></div>
-                    <div>
+                    <div className = "special-div">
                         <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
                         <FontAwesomeIcon icon="fa-solid fa-trash-can" />
                     </div>
@@ -96,34 +96,390 @@ const Department = () => {
                 </div>
                 <div className="three-div">
                     <div  className = "new-div" >
-                        <div><FontAwesomeIcon icon="fa-solid fa-users" /></div>
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
                         <div  >
                             <p>Team Members</p>
                             <h2>65</h2>
                         </div>
                     </div>
                     <div className = "new-div-2">
-                        <div><FontAwesomeIcon icon="fa-solid fa-clock" /></div>
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
                         <div>
                             <p>Attendance</p>
                             <h2>98%</h2>
                         </div>
                     </div>
                 </div>
-                <div className="4-div">
+                <div className="four-div">
                   <div className="div-1-1">
-                  <img src={test} alt="My profile" className ="My-profile" />
-                  <h2>60+</h2>
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
                   </div>
                   <div className="div-2-2">
                     <p>Description</p>
                     <h1>Develops and maintains technical systems and software</h1>
                   </div>
                 </div>
-                <div className="5-div">
+                <div className="five-div">
                   <button>view Department</button>
                 </div>
                 </div>
+
+
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+              </div>
+
+              <div className="dashboard-details-2-1-1">
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+              </div>
+
+              <div className="dashboard-details-2-1-1">
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+              </div>
+              <div className="dashboard-details-2-1-1">
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
+
+                <div className="card-3">
+                <div className="one-div">
+                    <div><h1>Engineering</h1></div>
+                    <div className = "special-div">
+                        <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
+                        <FontAwesomeIcon icon="fa-solid fa-trash-can" />
+                    </div>
+                </div>
+                <hr className = "new-hr"/>
+                <div className="two-div">
+                    <div>
+                        <img src={test} alt="My profile" className ="My-profile" />
+                    </div>
+                    <div>
+                        <p>Department Head</p>
+                        <h2>Sarah Johnson</h2>
+                    </div>
+                </div>
+                <div className="three-div">
+                    <div  className = "new-div" >
+                        <div><FontAwesomeIcon icon="fa-solid fa-users" className = "new-div-icon" /></div>
+                        <div  >
+                            <p>Team Members</p>
+                            <h2>65</h2>
+                        </div>
+                    </div>
+                    <div className = "new-div-2">
+                        <div><FontAwesomeIcon icon="fa-solid fa-clock" className = "new-div-icon" /></div>
+                        <div>
+                            <p>Attendance</p>
+                            <h2>98%</h2>
+                        </div>
+                    </div>
+                </div>
+                <div className="four-div">
+                  <div className="div-1-1">
+                    <img src={test} alt="My profile" className ="My-four-div-profile" />
+                    <h2>60+</h2>
+                  </div>
+                  <div className="div-2-2">
+                    <p>Description</p>
+                    <h1>Develops and maintains technical systems and software</h1>
+                  </div>
+                </div>
+                <div className="five-div">
+                  <button>view Department</button>
+                </div>
+                </div>
+
               </div>
 
     

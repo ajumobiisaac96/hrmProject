@@ -11,6 +11,8 @@
   import Profile from './pages/Profile.jsx';
   import AddEmployee from './pages/AddEmployee.jsx';
   import Department from './pages/Department.jsx'
+  import AddDepartment from './pages/AddDepartment.jsx';
+  import AddEmployeeDepartment from './pages/AddEmployeeDepartment.jsx'
 
   function App() {
     return (
@@ -26,6 +28,8 @@
             <Route path="/confirmPassword" element={<ConfirmPassword/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/department" element={<Department/>} />
+            <Route path="/department/add-new-department" element={<AddDepartment/>} />
+            <Route path="/department/add-employee-department" element={<AddEmployeeDepartment/>} />
             <Route path="/employee-managment" element={<EmployeeManagment/>} />
             <Route path="/employee-managment/view-profile" element={<Profile/>} />
             <Route path="/employee-managment/add-employee" element={<AddEmployee/>} />
