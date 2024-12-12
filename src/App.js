@@ -13,6 +13,9 @@
   import Department from './pages/Department.jsx'
   import AddDepartment from './pages/AddDepartment.jsx';
   import AddEmployeeDepartment from './pages/AddEmployeeDepartment.jsx'
+  import EditDepartment from './pages/EditDepartment.jsx'
+  import SearchEmployee from './pages/SearchEmployee.jsx';
+  import AddEmployeeToDepartment from './pages/AddEmployeeToDepartment.jsx'
 
   function App() {
     return (
@@ -28,11 +31,14 @@
             <Route path="/confirmPassword" element={<ConfirmPassword/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/department" element={<Department/>} />
+            <Route path="/department/edit-department" element={<EditDepartment/>} />
             <Route path="/department/add-new-department" element={<AddDepartment/>} />
             <Route path="/department/add-employee-department" element={<AddEmployeeDepartment/>} />
             <Route path="/employee-managment" element={<EmployeeManagment/>} />
             <Route path="/employee-managment/view-profile" element={<Profile/>} />
             <Route path="/employee-managment/add-employee" element={<AddEmployee/>} />
+            <Route path="/search-employee" element={<SearchEmployee/>} />
+            <Route path="/add-employee-to-department" element={<AddEmployeeToDepartment/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

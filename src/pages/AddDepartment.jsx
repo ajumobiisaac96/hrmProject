@@ -56,7 +56,7 @@ const AddDepartment = () => {
                         <label htmlFor="">Add Employee</label>
                         <input type="text" placeholder='Select Employee' />
                     </div>
-                    <Link to={"/department/add-employee-department"}><button>Add Employee</button></Link>                   
+                    <Link to={"/search-employee"}><button>Add Employee</button></Link>                   
                 </div>
                 <div className="add-department-feilds">
                     <label htmlFor="">Department Head</label>
@@ -69,7 +69,7 @@ const AddDepartment = () => {
             </div>
             
             <div className="department-button">
-                <button>Add New Department</button>
+                <Link to={"/department/edit-department"}><button>Add New Department</button></Link>
             </div>
               
             </div>

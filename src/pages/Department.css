@@ -41,6 +41,11 @@
     color: #6E6E6E;
 }
 
+.number-of-employee{
+    display: flex;
+    align-items: center !important ;
+}
+
 .dashboard-details-2-1-1{
     display: flex;
     justify-content: space-between;
@@ -54,6 +59,12 @@
     left: 2px;
     color: #6E6E6E;
     margin-right: 10px;
+}
+
+.number-of-employee .div-2{
+    display: flex !important;
+    flex-direction: row;
+    margin-top: -10px;
 }
 
 .card-3{

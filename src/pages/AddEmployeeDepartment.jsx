@@ -12,7 +12,6 @@ library.add(fas);
 
 const AddEmployeeDepartment = () => {
 
-
     return (
       <div>
         <div className="main-dashboard">
@@ -64,7 +63,7 @@ const AddEmployeeDepartment = () => {
                   <div className="div-2">
                     <div className="btn">
                         <button className ="grey-btn" >Deactivate Department</button>
-                        <button><FontAwesomeIcon icon="fa-solid fa-pen-to-square" />Edit Profile</button>
+                        <Link to={"/department/edit-department"}><button><FontAwesomeIcon icon="fa-solid fa-pen-to-square" />Edit Profile</button></Link>
                     </div>
                   </div>
                 </div>
