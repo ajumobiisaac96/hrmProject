@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import Sidebar from '../components/Sidebar'
 import test from '../assets/test.png'
-import '../pages/Dashboard.css'
-import '../pages/EmployeeManagment.css'
 import '../pages/AddEmployee.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas} from '@fortawesome/free-solid-svg-icons';
@@ -44,7 +42,7 @@ const AddEmployee = () => {
           <hr className="horizontal" />
 
           <div className="dashboard-details">
-            <h5>Add New Employee</h5>
+          <Link to={"/employee-managment"} ><h1 className="employee-profile"><FontAwesomeIcon icon="fa-solid fa-arrow-left" className = "left-arrow" />Add New Employee</h1></Link>
             <h6>24 Thursday October 2024</h6>
           </div>
 
@@ -52,7 +50,6 @@ const AddEmployee = () => {
             <p>Basic Information</p>
             <p>Employment Details</p>
             <p>Compensation Details</p>
-            <p>Emergency Contact Information</p>
           </div>
 
           <div className="dashboard-details-2">
@@ -67,7 +64,7 @@ const AddEmployee = () => {
                         <input type="text" placeholder='Enter Last Name ' />
                     </div>
                 </div>
-                <div className="input-2.1">
+                <div className="input-2-1">
                     <div className="main-input">
                         <label htmlFor="">Email</label>
                         <input type="email" placeholder='Enter Email' />

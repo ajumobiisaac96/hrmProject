@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import test from '../assets/test.png';
-import '../pages/Dashboard.css';
-import '../pages/EmployeeManagment.css';
 import '../pages/profile.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {Link} from 'react-router-dom'
 
 library.add(fas);
 
@@ -46,33 +45,32 @@ const Profile = () => {
           <hr className="horizontal" />
 
           <div className="dashboard-detail-1">
-            <h1 className="employee-profile">Employee Profile</h1>
+            <Link to={"/employee-managment"} ><h1 className="employee-profile"><FontAwesomeIcon icon="fa-solid fa-arrow-left" className = "left-arrow" />Employee Profile</h1></Link>
             <h6>24 Thursday October 2024</h6>
           </div>
 
-          <div className="dashboard-details-1">
-              <div className="number-of-employee">
-                <div className="div-1">
-                  <div className="div1-1">
-                    <img src={test} alt="My profile" className ="My-profile" />
-                  </div>
-                  <div className="div1-2">
-                    <h1>Michael Chen</h1>
-                    <h2>Product Designer</h2>
-                  </div>
-                  <div className="div1-3">
-                    <div className="btn-4">
-                      <button>Active</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="div-2">
-                  <div className="btn">
-                      <button>Edit Profile</button>
-                  </div>
+          <div className="number-of-employee">
+            <div className="div-one">
+              <div className="div1-1">
+                <img src={test} alt="My profile" className ="My-profile" />
+              </div>
+              <div className="div1-2">
+                <h1>Michael Chen</h1>
+                <h2>Product Designer</h2>
+              </div>
+              <div className="div1-3">
+                <div className="btn-4">
+                  <button>Active</button>
                 </div>
               </div>
           </div>
+            <div className="div-2">
+              <div className="btn">
+                  <button>Edit Profile</button>
+              </div>
+            </div>
+          </div>
+
 
           <div className="employee-info">
                 <h2><FontAwesomeIcon icon="fa-envelope" className = "icon" />michaelchen@rotech.com</h2>
@@ -339,6 +337,60 @@ const Profile = () => {
               </div>
             </div>
           </div>
+
+                  {/* Performance Metrics */}
+                    <div
+            style={{ display: activeSection === 'performanceMetrics' ? 'block' : 'none' }}
+          >
+            <div className="dashboard-detail">
+              <div className="header">
+                <h1>Performance Metrics</h1>
+              </div>
+              <div className="dashboard-details-2-1">
+                <div className="row-1">
+                  <div>
+                    <h2>Attendance Rate</h2>
+                    <h3>Monthly Attendance <span>95%</span> </h3>
+                    <p className='Progress-bar-grey'></p>
+                    <h1 className='Progress-bar-green'></h1>
+                    <h3>Year-to-Date Attendance<span>92%</span> </h3>
+                    <p className='Progress-bar-grey'></p>
+                    <h1 className='Progress-bar-green'></h1>
+                  </div>
+                  <div>
+                    <h2>Leave Balance</h2>
+                    <h3>Remaining Leave Days : 12/20 Days</h3>
+                  </div>
+                  <div>
+                    <h2>Late check-ins</h2>
+                    <h3>This month : 3 occurences</h3> 
+                    <h3>Year-to-Date : 3 occurences</h3>
+                  </div>
+                  {/* <div>
+                    <h2>Overtime Hours</h2>
+                    <h3>Design</h3>
+                  </div> */}
+                </div>
+                <div className="row-1">
+                <div>
+                  <h2>Overtime Hours</h2>
+                  <h3>This month : 10 hours</h3>
+                  <h3>Year-to-Date : 85 hours</h3>
+                </div>
+                <div>
+                  <h2>Partial Attendance</h2>
+                  <h3>This Month: 2 occurence</h3>
+                  <h3>Year-to-Date: 25 occurence</h3>
+                </div>
+                <div> 
+                </div>
+              </div>
+
+              </div>
+            </div>
+            
+          </div>
+
         </div>
       </div>
     </div>

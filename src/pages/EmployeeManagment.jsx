@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Sidebar from '../components/Sidebar'
 import test from '../assets/test.png'
-import '../pages/Dashboard.css'
 import '../pages/EmployeeManagment.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas} from '@fortawesome/free-solid-svg-icons';
@@ -47,34 +46,32 @@ const EmployeeManagament = () => {
             <h6>24 Thursday October 2024</h6>
           </div>
 
-            <div className="dashboard-details-1">
-                <div className="number-of-employee">
-                  <div className="div-1">
-                    <h2>40 Total employees</h2>
-                  </div>
-                  <div className="div-2">
-                    <div className="btn-1">
-                    <button onClick={() => setIsOpen(!isOpen)}>
-                      <FontAwesomeIcon icon="fa-solid fa-filter" /> filter
-                    </button>
-                  </div>
-                  {isOpen && (
-                    <div className = "dropdownstyle" >
-                      <p>All</p>
-                      <p>Engineering</p>
-                      <p>Design</p>
-                      <p>Marketing</p>
-                      <p>sales</p>
-                      <p>Data science</p>
-                      <p>operations</p>
-                    </div>
-                  )}
-                    <div className="btn">
-                        <Link to={"/employee-managment/add-employee"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Employee</button></Link>
-                    </div>
-                  </div>
-                </div>
+          <div className="number-of-employee">
+            <div className="div-1">
+              <h2>40 Total employees</h2>
             </div>
+            <div className="div-2">
+              <div className="btn-1">
+              <button onClick={() => setIsOpen(!isOpen)}>
+                <FontAwesomeIcon icon="fa-solid fa-filter" /> filter
+              </button>
+            </div>
+            {isOpen && (
+              <div className = "dropdownstyle" >
+                <p>All</p>
+                <p>Engineering</p>
+                <p>Design</p>
+                <p>Marketing</p>
+                <p>sales</p>
+                <p>Data science</p>
+                <p>operations</p>
+              </div>
+            )}
+              <div className="btn">
+                  <Link to={"/employee-managment/add-employee"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Employee</button></Link>
+              </div>
+            </div>
+          </div>
 
           <div className="dashboard-details-2">
               <div className="card">

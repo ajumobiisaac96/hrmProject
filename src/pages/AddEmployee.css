@@ -25,7 +25,7 @@
     color: #FFFF;
 }
 
-/* .form-2{
+.dashboard-details-2 .form-2{
     width: 1000px;
     height: 582px;
     top: 284px;
@@ -36,11 +36,14 @@
     padding-top: 20px;
 }
 
-.input-3{
-    display: flex;  
+.form-2 .input-3{
+    display: flex; 
+    margin-left: 20px;
+    margin-right: 20px;
+    
 }
 
-.left-input,.right-input label{
+.input-3 .left-input-1,.right-input-1 label{
     font-family: Inter;
     font-size: 16px;
     font-weight: 500;
@@ -51,12 +54,44 @@
     margin-bottom: 20px;
 }
 
-.left-input, .right-input input{
-    width: 472px;
+.input-2-1{
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.input-2-1 .main-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-2-1 label{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2E2E2E;
+
+}
+
+.input-2-1 input{
+    width: 950px;
+    height: 52px;
+    padding: 16px 869px 17px 16px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    outline: none;
+}
+
+.input-3 .left-input-1 input, .right-input-1 input{
+    width: 450px;
     height: 52px;
     padding: 16px 329px 17px 16px;
     border-radius: 8px;
     border: 2px solid #D9D9D9;
     background: transparent;
-    margin-bottom: 20px;
-} */
+    outline: none;
+}
+
