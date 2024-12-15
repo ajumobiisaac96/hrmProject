@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 
 library.add(fas);
 
-const AddEmployee = () => {
-  const [activeSection, setActiveSection] = useState('Basic Information'); // Tracks the active section
+const EditProfile = () => {
+    const [activeSection, setActiveSection] = useState('Basic Information'); // Tracks the active section
 
   return (
     <div>
@@ -48,13 +48,13 @@ const AddEmployee = () => {
             <hr className="horizontal" />
 
             <div className="dashboard-details">
-              <Link to={'/employee-managment'}>
+              <Link to={'/employee-managment/view-profile'}>
                 <h1 className="employee-profile">
                   <FontAwesomeIcon
                     icon="fa-solid fa-arrow-left"
                     className="left-arrow"
                   />
-                  Add New Employee
+                  Edit profile
                 </h1>
               </Link>
               <h6>24 Thursday October 2024</h6>
@@ -316,10 +316,10 @@ const AddEmployee = () => {
           <div className="container-2">
         <FontAwesomeIcon icon={faCircleCheck} className="check-icon" />
         <div className="pop-up-txt">
-          <h1>Employee Added Sucessful</h1>
-          <p>The new employee profile has been created successfully and is now part of the company database.</p>
-          <Link to="/employee-managment">
-            <h3>Employee Managment</h3>
+          <h1>Changes Made successfully</h1>
+          <p>The employee profile has been updated successfully. All changes have been saved.</p>
+          <Link to="/employee-managment/view-profile">
+            <h3>Employee Profile</h3>
           </Link>
         </div>
       </div>
@@ -334,4 +334,5 @@ const AddEmployee = () => {
   );
 };
 
-export default AddEmployee;
+
+export default EditProfile

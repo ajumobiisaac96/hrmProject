@@ -1,70 +1,53 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.dashboard-details h1{
+    color: #2E2E2E;
 }
 
-.dashboard-details-1 p{
-    width: Hug (168px)px;
+.dashboard-details-1 .active{
+    width: Hug (154px)px;
     height: Hug (35px)px;
-    left: 218px;
-    padding: 10px;
+    padding: 8px;
     gap: 4px;
     border-radius: 24px;
-    border: 1px solid#D9D9D9;
-    cursor: pointer;
+    background-color: #007BFF;
+    color: #ffff;
+    text-align: center;
 }
 
 .dashboard-details-1 p:hover{
-    background-color:#007BFF;
-    color: #FFFF;
+    width: Hug (154px)px;
+    height: Hug (35px)px;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 24px;
+    background-color: #007BFF;
+    color: #ffff;
+    text-align: center;
+    cursor: pointer;
 }
 
-.dashboard-details-1 p:active{
-    background-color:#007BFF;
-    color: #FFFF;
-}
-
-.dashboard-details-2 .form-2{
-    width: 1000px;
+.add-employee-form{
+    width: 970px;
     height: 582px;
-    top: 284px;
-    left: 46px;
+    margin-top: 20px;
     gap: 24px;
     border-radius: 16px;
-    border: 2px solid #D9D9D9;
-    padding-top: 20px;
+    border: 2px solid #D9D9D9;   
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
-.form-2 .input-3{
-    display: flex; 
-    margin-left: 20px;
-    margin-right: 20px;
-    
+.splited-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-.input-3 .left-input-1,.right-input-1 label{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin-bottom: 20px;
-}
-
-.input-2-1{
-    margin-left: 20px;
-    margin-right: 30px;
-}
-
-.input-2-1 .main-input{
+.left-hand-side-col {
     display: flex;
     flex-direction: column;
 }
 
-.input-2-1 label{
+.left-hand-side-col label{
     font-family: Inter;
     font-size: 16px;
     font-weight: 500;
@@ -72,26 +55,172 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #2E2E2E;
-
+    margin-bottom: 10px;
 }
 
-.input-2-1 input{
-    width: 950px;
-    height: 52px;
-    padding: 16px 869px 17px 16px;
-    border-radius: 8px;
-    border: 2px solid #D9D9D9;
-    outline: none;
+.left-hand-side-col span{
+    color: red;
 }
 
-.input-3 .left-input-1 input, .right-input-1 input{
+.left-hand-side-col input{
     width: 450px;
     height: 52px;
     padding: 16px 329px 17px 16px;
     border-radius: 8px;
     border: 2px solid #D9D9D9;
-    background: transparent;
+    background-color: transparent;
     outline: none;
 }
 
+.left-hand-side-col input::placeholder{
+    font-family: Inter;
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.left-hand-side-col select{
+    width: 450px;
+    height: 52px;
+    padding: 16px 329px 17px 16px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    background-color: transparent;
+    outline: none;
+}
+
+.left-hand-side-col option{
+    font-family: Inter;
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.right-hand-side-col label{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+
+.right-hand-side-col span{
+    color: red;
+}
+
+.right-hand-side-col input{
+    width: 450px;
+    height: 52px;
+    padding: 16px 329px 17px 16px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    background-color: transparent;
+    outline: none;
+}
+
+.right-hand-side-col input::placeholder{
+    font-family: Inter;
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.right-hand-side-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-hand-side-col select{
+    width: 450px;
+    height: 52px;
+    padding: 16px 329px 17px 16px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    background-color: transparent;
+    outline: none;
+}
+
+.right-hand-side-col option{
+    font-family: Inter;
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.single-row{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.single-row label {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+
+.single-row span{
+    color: red;
+}
+
+.single-row input{
+    height: 52px;
+    padding: 16px 869px 17px 16px;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
+    outline: none;
+    background-color: transparent;
+}
+
+.single-row input::placeholder{
+    font-family: Inter;
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.add-employee-btn .btn-2{
+    margin-left: 400px !important;
+}
+
+.add-employee-btn .btn-2:hover{
+    width:150px
+}
+
+.container-2{
+ display: none;
+ margin-left:150px ;
+ margin-top: 100px;
+}
+
+.container-2 h3{
+    text-align: center !important;
+}

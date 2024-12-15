@@ -16,6 +16,7 @@
   import EditDepartment from './pages/EditDepartment.jsx'
   import SearchEmployee from './pages/SearchEmployee.jsx';
   import AddEmployeeToDepartment from './pages/AddEmployeeToDepartment.jsx'
+  import EditProfile from './pages/EditProfile.jsx'
 
   function App() {
     return (
@@ -39,6 +40,7 @@
             <Route path="/employee-managment/add-employee" element={<AddEmployee/>} />
             <Route path="/search-employee" element={<SearchEmployee/>} />
             <Route path="/add-employee-to-department" element={<AddEmployeeToDepartment/>} />
+            <Route path="/edit-profile" element={<EditProfile/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
