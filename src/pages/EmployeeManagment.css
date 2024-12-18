@@ -244,28 +244,36 @@
   
   .suspend-menu {
     position: absolute;
-    top: 1px; /* Adjust to position below three dots */
-    right: -30px; /* Aligns dropdown to the right of its container */    border-radius: 4px;
-    padding: 5px;
-    z-index: 1000;
+    top: 10px; /* Adjust based on spacing from the three dots */
+    right: -20px;
+    border-radius: 8px;
+    background-color: #F8F8F8;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
   }
   
-  .suspend-menu .btn-4 {
-    width: 80px;
+  .suspend-menu button {
+    width: 100px;
+    text-align: center;
     height: 30px;
-    background: #fff;
-    border: 1px solid #ccc;
+    color: black; /* Text color */
+    border: none;
+    background-color: none !important;
+    padding: 8px 12px;  
+    margin-bottom: -20px; /* Space between buttons */
     border-radius: 4px;
-    padding: 5px;
-    color: #007bff;
+    cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s ease;
   }
   
-  .suspend-menu .btn-4:hover {
-    background-color: #007bff;
-    color: #fff;
+  .suspend-menu button:hover {
+    background-color: #7e7c7c; /* Slightly darker red for hover effect */
+    color: #F8F8F8;
   }
   
-  .btn-2 button{
-    width: 100px !important;
+  .btn-2 .btn-5{
+    width: 100px;
   }

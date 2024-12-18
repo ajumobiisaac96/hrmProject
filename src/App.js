@@ -19,6 +19,7 @@
   import EditProfile from './pages/EditProfile.jsx'
   import SuspendEmployee from './pages/SuspendEmployee.jsx'
   import DeactivateEmployee from './pages/DeactivateEmployee.jsx'
+  import AttendanceAndTracking from './pages/AttendanceAndTracking.jsx'
 
   function App() {
     return (
@@ -43,8 +44,9 @@
             <Route path="/search-employee" element={<SearchEmployee/>} />
             <Route path="/add-employee-to-department" element={<AddEmployeeToDepartment/>} />
             <Route path="/edit-profile" element={<EditProfile/>} />
-            <Route path="/suspend-employee" element={<SuspendEmployee/>} />
-            <Route path="/Deactivate-employee" element={<DeactivateEmployee/>} />
+            <Route path="/employee-managment/suspend-employee" element={<SuspendEmployee/>} />
+            <Route path="/employee-managment/Deactivate-employee" element={<DeactivateEmployee/>} />
+            <Route path="/attendance-and-tracking" element={<AttendanceAndTracking/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

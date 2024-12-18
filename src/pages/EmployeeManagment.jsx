@@ -1,399 +1,154 @@
-// import React, {useState} from 'react';
-// import Sidebar from '../components/Sidebar'
-// import test from '../assets/test.png'
-// import '../pages/EmployeeManagment.css'
+// import React, { useState } from 'react';
+// import Sidebar from '../components/Sidebar';
+// import test from '../assets/test.png';
+// import '../pages/EmployeeManagment.css';
 // import { library } from '@fortawesome/fontawesome-svg-core';
-// import { fas} from '@fortawesome/free-solid-svg-icons';
+// import { fas } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom';
 
 // library.add(fas);
 
-// const EmployeeManagament = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [dropDown, setDropDown] = useState(false);
+// // Reusable EmployeeCard Component
+// const EmployeeCard = ({ employee, onToggleDropdown, isDropdownOpen }) => {
+//   return (
+//     <div className="card">
+//       <div className="div-1">
+//         <img src={test} alt="Profile" className="My-profile" />
+//         <p onClick={() => onToggleDropdown(employee.id)}>
+//           <FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className="three-dots" />
+//         </p>
 
-//   const toggleDropDown = () => {
-//     // Toggle the state correctly
-//     setDropDown((prev) => !prev);
+//         {isDropdownOpen && (
+//           <div className="suspend-menu">
+//             <Link to="/suspend-employee">
+//               <button className="btn-4">Suspend</button>
+//             </Link>
+//           </div>
+//         )}
+//       </div>
+//       <h1>{employee.name}</h1>
+//       <h2>{employee.role}</h2>
+//       <hr />
+//       <div className="div-2">
+//         <div className="department">
+//           <h1>Department</h1>
+//           <h2>{employee.department}</h2>
+//         </div>
+//         <div className="Id-number">
+//           <h1>ID number</h1>
+//           <h2>{employee.id}</h2>
+//         </div>
+//       </div>
+//       <div className="div-3">
+//         <div className="status">
+//           <h1>Status</h1>
+//           <h2>{employee.status}</h2>
+//         </div>
+//         <div className="btn-2">
+//           <Link to="/employee-managment/view-profile">
+//             <button className="btn-5">View Profile</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const EmployeeManagement = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [activeDropdown, setActiveDropdown] = useState(null);
+
+//   const toggleDropdown = (id) => {
+//     setActiveDropdown((prev) => (prev === id ? null : id));
 //   };
 
-  
+//   const employees = [
+//     { id: '49201', name: 'Sarah Johnson', role: 'Software Engineer', department: 'Engineering', status: 'Active' },
+//     { id: '49202', name: 'John Doe', role: 'UI Designer', department: 'Design', status: 'Inactive' },
+//     { id: '49203', name: 'John Doe', role: 'UI Designer', department: 'Design', status: 'Inactive' },
+//     { id: '49204', name: 'Sarah Johnson', role: 'Software Engineer', department: 'Engineering', status: 'Active' },
+//     // Add more employees here
+//   ];
+
 //   return (
 //     <div>
 //       <div className="main-dashboard">
-//         <Sidebar/>
+//         <Sidebar />
 //         <div className="dashboard">
 //           <div className="slide-one">
 //             <div className="slide-one-1">
 //               <div className="name">
 //                 <h5>Joseph Dooley</h5>
 //                 <h6>Good Morning</h6>
-//               </div> 
+//               </div>
 //             </div>
 //             <div className="slide-one-2">
 //               <div className="search">
-//                 <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search' />
+//                 <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" />
+//                 <input type="text" placeholder="Search" />
 //               </div>
-
 //               <div className="notification">
 //                 <FontAwesomeIcon icon="fa-solid fa-bell" />
 //                 <h6>6</h6>
 //               </div>
-
 //               <div className="user-profile">
-//               <img src={test} alt="My profile" className ="My-profile" />
+//                 <img src={test} alt="My profile" className="My-profile" />
 //               </div>
-//             </div> 
+//             </div>
 //           </div>
-
 //           <hr className="horizontal" />
-
 //           <div className="dashboard-details">
-//             <h5>Employee Managment</h5>
+//             <h5>Employee Management</h5>
 //             <h6>24 Thursday October 2024</h6>
 //           </div>
-
 //           <div className="number-of-employee">
 //             <div className="div-1">
-//               <h2>40 Total employees</h2>
+//               <h2>{employees.length} Total employees</h2>
 //             </div>
 //             <div className="div-2">
 //               <div className="btn-1">
-//               <button onClick={() => setIsOpen(!isOpen)}>
-//                 <FontAwesomeIcon icon="fa-solid fa-filter" /> filter
-//               </button>
-//             </div>
-//             {isOpen && (
-//               <div className = "dropdownstyle" >
-//                 <p>All</p>
-//                 <p>Engineering</p>
-//                 <p>Design</p>
-//                 <p>Marketing</p>
-//                 <p>sales</p>
-//                 <p>Data science</p>
-//                 <p>operations</p>
+//                 <button onClick={() => setIsOpen(!isOpen)}>
+//                   <FontAwesomeIcon icon="fa-solid fa-filter" /> Filter
+//                 </button>
 //               </div>
-//             )}
+//               {isOpen && (
+//                 <div className="dropdownstyle">
+//                   <p>All</p>
+//                   <p>Engineering</p>
+//                   <p>Design</p>
+//                   <p>Marketing</p>
+//                   <p>Sales</p>
+//                   <p>Data Science</p>
+//                   <p>Operations</p>
+//                 </div>
+//               )}
 //               <div className="btn">
-//                   <Link to={"/employee-managment/add-employee"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Employee</button></Link>
+//                 <Link to="/employee-managment/add-employee">
+//                   <button>
+//                     <FontAwesomeIcon icon="fa-solid fa-plus" /> Add New Employee
+//                   </button>
+//                 </Link>
 //               </div>
 //             </div>
 //           </div>
-
 //           <div className="dashboard-details-2">
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
+//             {employees.map((employee) => (
+//               <EmployeeCard
+//                 key={employee.id}
+//                 employee={employee}
+//                 isDropdownOpen={activeDropdown === employee.id}
+//                 onToggleDropdown={toggleDropdown}
+//               />
+//             ))}
 //           </div>
-
-//           <div className="dashboard-details-2">
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-
-//               <div className="card">
-//               <div className="div-1">
-//                   <img src={test} alt="My profile" className ="My-profile" />
-//                   <p onClick={toggleDropDown} ><FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className='three-dots' /></p>
-
-//                   {dropDown &&
-//                   ( <div className='suspend-menu'>
-//                     <Link to={'/suspend-employee'}><button className='btn-4'>suspend</button></Link>
-//                   </div>)
-//                 }
-//                 </div>
-//                 <h1>Sarah Johnson</h1>
-//                 <h2>Software Engineer</h2>
-//                 <hr />
-//                 <div className="div-2">
-//                   <div className="department">
-//                     <h1>Department</h1>
-//                     <h2>Engineering</h2>
-//                   </div>
-//                   <div className="Id-number">
-//                     <h1>ID number</h1>
-//                     <h2>49201</h2>
-//                   </div>
-//                 </div>
-//                 <div className="div-3">
-//                   <div className="status">
-//                     <h1>status</h1>
-//                     <h2>Active</h2>
-//                   </div>
-//                   <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//                 </div>
-//               </div>
-          
-//           <div className="card">
-//               <div className="div-1">
-//                 <img src={test} alt="My profile" className="My-profile" />
-//                 <p onClick={toggleDropDown}>
-//                   <FontAwesomeIcon icon="fa-solid fa-ellipsis-vertical" className="three-dots" />
-//                 </p>
-
-//                 {dropDown && (
-//                   <div className="suspend-menu">
-//                     <Link to={'/suspend-employee'}>
-//                       <button className="btn-4">Suspend</button>
-//                     </Link>
-//                   </div>
-//                 )}
-//               </div>
-//               <h1>Sarah Johnson</h1>
-//               <h2>Software Engineer</h2>
-//               <hr />
-//               <div className="div-2">
-//                 <div className="department">
-//                   <h1>Department</h1>
-//                   <h2>Engineering</h2>
-//                 </div>
-//                 <div className="Id-number">
-//                   <h1>ID number</h1>
-//                   <h2>49201</h2>
-//                 </div>
-//               </div>
-//               <div className="div-3">
-//                 <div className="status">
-//                   <h1>Status</h1>
-//                   <h2>Active</h2>
-//                 </div>
-//                 <div className="btn-2">
-//                   <Link to="/view-profile">
-//                     <button className='btn-5'>View Profile</button>
-//                   </Link>
-//                 </div>
-//               </div>
-//             </div>
-
-//           </div>
-
 //         </div>
-
 //       </div>
 //     </div>
-//   )
-// }
+//   );
+// };
 
-// export default EmployeeManagament
+// export default EmployeeManagement;
 
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
@@ -418,11 +173,11 @@ const EmployeeCard = ({ employee, onToggleDropdown, isDropdownOpen }) => {
 
         {isDropdownOpen && (
           <div className="suspend-menu">
-            <Link to="/suspend-employee">
+            <Link to="/employee-managment/suspend-employee">
               <button className="btn-4">Suspend</button>
             </Link>
-            <Link to="/Deactivate-employee">
-              <button className="btn-4">Deactivate</button>
+            <Link to={"/employee-managment/Deactivate-employee"}>
+            <button className="btn-5">Deactivate</button>
             </Link>
           </div>
         )}
