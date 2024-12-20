@@ -4,9 +4,26 @@ import test from '../assets/test.png'
 import '../pages/AttendanceAndTracking.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import DummyTable from '../components/DummyTable';
+import Pagination from '../components/Pagination';
 
 const AttendanceAndTracking = () => {
-    const [isOpen, setIsOpen] = useState(false);
+ // State to control the opening and closing of the dropdowns
+ const [isMonthOpen, setIsMonthOpen] = useState(false);
+ const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
+
+ // Handle opening and closing the "This Month" dropdown
+ const toggleMonthDropdown = () => {
+   setIsMonthOpen(!isMonthOpen);
+   setIsDepartmentOpen(false); // Close the other dropdown when one is opened
+ };
+
+ // Handle opening and closing the "All Department" dropdown
+ const toggleDepartmentDropdown = () => {
+   setIsDepartmentOpen(!isDepartmentOpen);
+   setIsMonthOpen(false); // Close the other dropdown when one is opened
+ };
+
     return (
         <div>
           <div className="main-dashboard">
@@ -81,28 +98,58 @@ const AttendanceAndTracking = () => {
                     <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search Department' />
                 </div>
                 <div className="div-2">
-                  <div className="btn-1">
-                  <button onClick={() => setIsOpen(!isOpen)}>
-                    <FontAwesomeIcon icon="fa-solid fa-filter" /> filter
-                  </button>
-                </div>
-                {isOpen && (
-                  <div className = "dropdownstyle" >
-                    <p>All</p>
-                    <p>Engineering</p>
-                    <p>Design</p>
-                    <p>Marketing</p>
-                    <p>sales</p>
-                    <p>Data science</p>
-                    <p>operations</p>
+                  <div className="new-btn">
+                    <button onClick={toggleMonthDropdown}>
+                      This Month <FontAwesomeIcon icon="fa-circle-chevron-down" />
+                    </button>
+                    {isMonthOpen && (
+                      <div className="dropdownstyle month-dropdown">
+                        <p>January</p>
+                        <p>February</p>
+                        <p>March</p>
+                        <p>April</p>
+                        <p>May</p>
+                        <p>June</p>
+                        <p>July</p>
+                        <p>August</p>
+                        <p>September</p>
+                        <p>October</p>
+                        <p>November</p>
+                        <p>December</p>
+                      </div>
+                    )}
                   </div>
-                )}
+
                   <div className="btn">
-                      <Link to={"/department/add-new-department"}><button><FontAwesomeIcon icon="fa-solid fa-plus" />Add New Department</button></Link>
+                    <button onClick={toggleDepartmentDropdown}>
+                      <FontAwesomeIcon icon="fa-filter" /> All Department
+                    </button>
+                    {isDepartmentOpen && (
+                      <div className="dropdownstyle department-dropdown">
+                        <p>HR</p>
+                        <p>IT</p>
+                        <p>Finance</p>
+                        <p>Sales</p>
+                        <p>Marketing</p>
+                        <p>Operations</p>
+                        <p>Support</p>
+                        <p>Legal</p>
+                        <p>Logistics</p>
+                        <p>Admin</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
-    
+
+              <div className="table-div">
+                {/* <p>Attendance and Tracking Monthly Overview </p> */}
+                <DummyTable/>
+              </div>
+
+              <Pagination/>
+                
+                  
             </div>
     
           </div>
