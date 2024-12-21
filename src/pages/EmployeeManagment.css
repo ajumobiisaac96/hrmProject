@@ -112,6 +112,36 @@
     flex-direction: row;
 }
 
+.number-of-employee .div-3{
+    /* margin: 20px; */
+    position: relative; /* Ensure dropdowns position correctly */
+
+  }
+  
+  .btn-container {
+    position: relative;
+  }
+  .div-3 .dropdownstyle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    top: 100%; /* Position it directly below the button */
+    left: 0;
+    width: 200px; /* Match the button width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdownstyle p {
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  .dropdownstyle p:hover {
+    background-color: #ddd;
+  }
+
 .div-2 h1{
     font-family: Inter;
     font-size: 14px;

@@ -3,7 +3,6 @@ import Sidebar from '../components/Sidebar'
 import test from '../assets/test.png'
 import '../pages/AttendanceAndTracking.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
 import DummyTable from '../components/DummyTable';
 import Pagination from '../components/Pagination';
 
@@ -95,7 +94,7 @@ const AttendanceAndTracking = () => {
 
             <div className="number-of-employee">
                 <div className="new-div-1">
-                    <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search Department' />
+                    <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search' />
                 </div>
                 <div className="div-2">
                   <div className="new-btn">

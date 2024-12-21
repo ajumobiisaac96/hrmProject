@@ -261,7 +261,7 @@ const EmployeeManagement = () => {
             <div className="div-1">
               <h2>{employees.length} Total employees</h2>
             </div>
-            <div className="div-2">
+            <div className="div-3">
               <div className="btn-1">
                 <button onClick={() => setIsOpen(!isOpen)}>
                   <FontAwesomeIcon icon="fa-solid fa-filter" /> Filter

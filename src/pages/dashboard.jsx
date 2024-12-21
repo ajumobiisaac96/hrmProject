@@ -54,18 +54,18 @@ const dashboard = () => {
             </div>
 
             <div className="first-grid">
-            <FontAwesomeIcon icon="fa-solid fa-calendar" className="dashboard-icon" />
+            <FontAwesomeIcon icon="fa-solid fa-building"  className="dashboard-icon"/>
               <div>
-                <h6>Leave requests</h6>
-                <h5>2</h5>
+                <h6>Department</h6>
+                <h5>13</h5>
               </div>
             </div>
 
             <div className="first-grid">
-            <FontAwesomeIcon icon="fa-solid fa-calendar-xmark" className="dashboard-icon" />
+            <FontAwesomeIcon icon="fa-solid fa-calendar" className="dashboard-icon" />
               <div>
-                <h6>Pending Tasks</h6>
-                <h5>5</h5>
+                <h6>Leave requests</h6>
+                <h5>2</h5>
               </div>
             </div>
 
