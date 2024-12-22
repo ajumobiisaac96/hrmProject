@@ -16,7 +16,7 @@ const Sidebar = () => {
     { name: "Department", icon: "fa-building", to: "/Department" },
     { name: "Employee Management", icon: "fa-users", to: "/employee-managment" },
     { name: "Attendance & Tracking", icon: "fa-clipboard-user", to: "/attendance-and-tracking" },
-    { name: "Leave Management", icon: "fa-calendar", to: "/LeaveManagement" },
+    { name: "Leave Management", icon: "fa-calendar", to: "/LeaveManagment" },
     { name: "Payroll Management", icon: "fa-money-bill-1", to: "/PayrollManagement" },
     { name: "Report & Analysis", icon: "fa-chart-line", to: "/ReportAnalysis" },
     // { name: "Task Management", icon: "fa-list-check", to: "/TaskManagement" },
