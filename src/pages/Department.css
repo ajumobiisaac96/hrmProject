@@ -299,3 +299,7 @@ color: #4E4E4E;
     width: 438px;
     margin-left: 0px;
 }
+
+.div-2 .btn button{
+    width: 250px !important;
+}

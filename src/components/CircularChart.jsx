@@ -39,4 +39,6 @@ const CircularChart = ({ data }) => {
   );
 };
 
+
+
 export default CircularChart;
