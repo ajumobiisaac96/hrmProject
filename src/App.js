@@ -21,6 +21,7 @@
   import DeactivateEmployee from './pages/DeactivateEmployee.jsx'
   import AttendanceAndTracking from './pages/AttendanceAndTracking.jsx'
   import LeaveManagment from './pages/LeaveManagment.jsx'
+  import PayrollManagement from './pages/PayrollManagement.jsx'
 
   function App() {
     return (
@@ -49,6 +50,7 @@
             <Route path="/employee-managment/Deactivate-employee" element={<DeactivateEmployee/>} />
             <Route path="/attendance-and-tracking" element={<AttendanceAndTracking/>} />
             <Route path="/LeaveManagment" element={<LeaveManagment/>} />
+            <Route path="/PayrollManagement" element={<PayrollManagement/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
