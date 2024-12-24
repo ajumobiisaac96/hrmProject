@@ -75,3 +75,10 @@
   margin-right: 8px;
   color: #2e2e2e;
 }
+
+.dashboard-details {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between !important;
+  width: 1000px !important;
+}
