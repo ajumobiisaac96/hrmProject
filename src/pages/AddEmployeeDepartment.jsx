@@ -45,7 +45,7 @@ const AddEmployeeDepartment = () => {
             <hr className="horizontal" />
   
             <div className="dashboard-detail-1">
-              <Link to = "/department/add-new-department" ><h1 className="employee-profile"><FontAwesomeIcon icon="fa-solid fa-arrow-left" className = "left-arrow"></FontAwesomeIcon>Employee Profile</h1></Link>
+              <Link to = "/department" ><h1 className="employee-profile"><FontAwesomeIcon icon="fa-solid fa-arrow-left" className = "left-arrow"></FontAwesomeIcon>Product design Department</h1></Link>
               <h6>24 Thursday October 2024</h6>
             </div>
   

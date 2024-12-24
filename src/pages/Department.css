@@ -1,11 +1,12 @@
 .slide-one-1{
     display: flex;
     width: 1000px;
-    margin-top: -10px;
+    margin-top: -5px;
 }
 .slide-one-2-1{
-    width: 80px !important;
+    width: 120px !important;
     display: flex;
+    align-items: center;
     margin-left: 300px;
 }
 

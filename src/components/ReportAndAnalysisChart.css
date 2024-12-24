@@ -1,0 +1,78 @@
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .slide-one {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-top: 20px;
+  }
+  
+  .slide-one-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .graph-container, .top-attendance {
+    width: 48%;
+  }
+  
+  .graph, .line-graph, .progress-bar {
+    width: 100%;
+    height: 300px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .view-button {
+    align-self: flex-end;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .attendance-trends {
+    width: 1000px;
+    margin-top: 20px;
+  }
+  
+  .progress-bars {
+    margin-top: 20px;
+  }
+  
+  .progress-bar-container {
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 20px;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+  }

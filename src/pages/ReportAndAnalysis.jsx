@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import './PayrollManagement.css';
+import ReportAndAnalysisChart from '../components/ReportAndAnalysisChart';
 import test from '../assets/test.png';
 import PayrollCircularChart from '../components/PayrollCircularChart';
 import LineChart from '../components/LineChart';
@@ -10,6 +11,7 @@ import payrollSummary from '../data/payrollSummary';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+
 
 const PayrollManagement = () => {
   const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
@@ -142,109 +144,8 @@ const PayrollManagement = () => {
                   </div>
                 </div>
               </div>
-              <div id="charts" className="payroll-management-charts">
-                <div className="chart-container">
-                  <PayrollCircularChart
-                    title="Payroll Cost Distribution"
-                    data={payrollData}
-                    style={{
-                      backgroundColor: '#FFFFFF',
-                      width: '100%',
-                      height: '300px',
-                      padding: '16px',
-                      borderRadius: '16px',
-                      border: '1px solid #D9D9D9',
-                      margin: '0 auto',
-                    }}
-                  />
-                </div>
-                <div className="chart-container">
-                  <LineChart
-                    title="Payroll Cost Trend"
-                    data={payrollData}
-                    style={{
-                      backgroundColor: '#FFFFFF',
-                      width: '100%',
-                      height: '300px',
-                      padding: '16px',
-                      borderRadius: '16px',
-                      border: '1px solid #D9D9D9',
-                      margin: '0 auto',
-                    }}
-                  />
-                </div>
-              </div>
-              <button onClick={downloadPDF}>Download Charts as PDF</button>
-              <div className="number-of-employee">
-                <div className="new-div-1">
-                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" />
-                  <input type="text" placeholder="Search" />
-                </div>
-                <div className="filters">
-                  <select className="filter-select" value={selectedMonth} onChange={handleMonthChange}>
-                    <option value="January">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                  </select>
-                  <select className="filter-select" value={selectedDepartment} onChange={handleDepartmentChange}>
-                    <option value="All">All</option>
-                    <option value="Human Resources">Human Resources</option>
-                    <option value="Finance">Finance</option>
-                    <option value="IT">IT</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Sales">Sales</option>
-                  </select>
-                  <div className="btn">
-                    <button onClick={toggleDepartmentDropdown}>
-                      <FontAwesomeIcon icon="fa-filter" /> Filter
-                    </button>
-                    {isDepartmentOpen && (
-                      <div className="dropdownstyle department-dropdown">
-                        <p onClick={() => handleFilterChange('all')}>All</p>
-                        <p onClick={() => handleFilterChange('processed')}>Paid</p>
-                        <p onClick={() => handleFilterChange('pending')}>Processing</p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="filtered-results">
-                <h2>{getHeading()}</h2>
-                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                  <thead>
-                    <tr>
-                      <th style={tableHeaderStyle}>Employee</th>
-                      <th style={tableHeaderStyle}>Department</th>
-                      <th style={tableHeaderStyle}>Amount</th>
-                      <th style={tableHeaderStyle}>Date</th>
-                      <th style={tableHeaderStyle}>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredPayrolls.map((payroll, index) => (
-                      <tr key={index} style={tableRowStyle}>
-                        <td style={tableCellStyle}>{payroll.employee}</td>
-                        <td style={tableCellStyle}>{payroll.department}</td>
-                        <td style={tableCellStyle}>₦{payroll.amount}</td>
-                        <td style={tableCellStyle}>{payroll.date}</td>
-                        <td style={{ ...tableCellStyle, ...getStatusStyle(payroll.status) }}>
-                          {payroll.status}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <button onClick={handleViewAllowance}>View Allowance and Contribution</button>
-              </div>
+              <ReportAndAnalysisChart/>
+
             </>
           )}
         </div>

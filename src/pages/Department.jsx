@@ -121,7 +121,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                  <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -171,7 +171,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -223,7 +223,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -273,7 +273,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -325,7 +325,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -375,7 +375,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -426,7 +426,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 
@@ -476,7 +476,7 @@ const Department = () => {
                   </div>
                 </div>
                 <div className="five-div">
-                  <button>view Department</button>
+                <Link to={"/department/add-employee-department"}><button>view Department</button></Link>
                 </div>
                 </div>
 

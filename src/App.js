@@ -22,6 +22,8 @@
   import AttendanceAndTracking from './pages/AttendanceAndTracking.jsx'
   import LeaveManagment from './pages/LeaveManagment.jsx'
   import PayrollManagement from './pages/PayrollManagement.jsx'
+  import AllowanceAndContribution from './pages/AllowanceAndContribution.jsx';
+  import ReportAndAnalysis from './pages/ReportAndAnalysis.jsx';
 
   function App() {
     return (
@@ -51,6 +53,8 @@
             <Route path="/attendance-and-tracking" element={<AttendanceAndTracking/>} />
             <Route path="/LeaveManagment" element={<LeaveManagment/>} />
             <Route path="/PayrollManagement" element={<PayrollManagement/>} />
+            <Route path="/AllowanceAndContribution" element={<AllowanceAndContribution/>} />
+            <Route path="/ReportAndAnalysis" element={<ReportAndAnalysis/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
