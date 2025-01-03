@@ -40,7 +40,7 @@ const dashboard = () => {
           <hr className="horizontal" />
 
           <div className="dashboard-details">
-            <h5>Dashboard</h5>
+            <h5>Department</h5>
             <h6>24 Thursday October 2024</h6>
           </div>
 
@@ -80,22 +80,21 @@ const dashboard = () => {
 
           <div className="dashboard-details-2">
             <div className="grid">
-              <h1>Task Overview</h1>
+              <h1>Department Overview</h1>
               <hr />
-              <h5>Number of pending tasks</h5>
-              <h6>5 pending Tasks</h6>
+              <h5>Number of Department</h5>
+              <h6>13 Department</h6>
 
               <div className = "priority">
-              <h5>Priority</h5>
+              <h5>Total Leaves</h5>
                 <div>
-                  <h6>3 High Priority</h6>
-                  <h4>2 Medium Priority</h4>
+                  <h6>32 Total leaves</h6>
                 </div>
               </div>
 
               <div className="TaskProgress">
-                <h5>Task Progress</h5>
-                <p>50% compeleted</p>
+                <h5>Attendance Rate</h5>
+                <p>94% compeleted</p>
                 <p></p>
               </div>
 
@@ -103,8 +102,8 @@ const dashboard = () => {
                 <div className="lastdiv-1">
                     <div><FontAwesomeIcon icon="fa-calendar" /></div>
                     <div>
-                      <h6>Next Payroll Date</h6>
-                      <h5>oct 31, 2024</h5>
+                      <h6>Average Work Hours</h6>
+                      <h5>07:20:03</h5>
                     </div>
                 </div>
                 <button>Manage Task</button>
@@ -120,15 +119,14 @@ const dashboard = () => {
               <div className = "priority">
               <h5>Leave Type</h5>
                 <div>
-                  <h6>1 Urgent</h6>
-                  <h4>1 schelduded</h4>
+                  <h4>2 pending</h4>
                   <h3>1 Approved</h3>
                 </div>
               </div>
 
               <div className="TaskProgress">
                 <h5>Approval status</h5>
-                <p>10% Approved</p>
+                <p>40% Approved</p>
                 <p></p>
               </div>
 

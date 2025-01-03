@@ -81,36 +81,36 @@ const ReportAndAnalysis = () => {
           </div>
           <hr className="horizontal" />
           <div className="dashboard-details">
-            <h5>Leave Management</h5>
+            <h5>Report and Analysis</h5>
             <h6>24 Thursday October 2024</h6>
           </div>
           <div className="dashboard-details-1">
             <div className="first-grid">
               <FontAwesomeIcon icon="fa-circle-check" className="dashboard-icon-1" style={{ color: '#22C55E' }} />
               <div>
-                <h6>Total Request</h6>
+                <h6>Total work force</h6>
                 <h5>28</h5>
               </div>
             </div>
             <div className="first-grid">
               <FontAwesomeIcon icon="fa-solid fa-calendar" className="dashboard-icon-2" style={{ color: '#007BFF' }} />
               <div>
-                <h6>Pending</h6>
-                <h5>10</h5>
+                <h6>Attendance Rate</h6>
+                <h5>92.5%</h5>
               </div>
             </div>
             <div className="first-grid">
               <FontAwesomeIcon icon="fa-clock" className="dashboard-icon-3" style={{ color: '#6F42C1' }} />
               <div>
-                <h6>Approved</h6>
-                <h5>12</h5>
+                <h6>Leave Utilization</h6>
+                <h5>65%</h5>
               </div>
             </div>
             <div className="first-grid">
               <FontAwesomeIcon icon="fa-solid fa-triangle-exclamation" className="dashboard-icon-4" style={{ color: '#FF6464' }} />
               <div>
-                <h6>Rejected</h6>
-                <h5>6</h5>
+                <h6>Payroll cost</h6>
+                <h5>N15,300,000</h5>
               </div>
             </div>
           </div>
