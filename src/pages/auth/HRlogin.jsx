@@ -39,7 +39,7 @@ const HRlogin = () => {
     );
 
     console.log('Login successful:', response.data);
-    navigate('/dashboard'); // Redirect to the dashboard on success
+    navigate('/Dashboard'); // Redirect to the dashboard on success
   } catch (error) {
     if (error.response) {
       console.error('Backend responded with error:', error.response.data);

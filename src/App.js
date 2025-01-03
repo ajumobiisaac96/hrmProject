@@ -37,7 +37,7 @@
             <Route path="/forgotpassword" element={<Forgotpassword />} />
             <Route path="/verifyemail" element={<Verifyemail/>} />
             <Route path="/confirmPassword" element={<ConfirmPassword/>} />
-            <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/Dashboard" element={<Dashboard/>} />
             <Route path="/department" element={<Department/>} />
             <Route path="/department/edit-department" element={<EditDepartment/>} />
             <Route path="/department/add-new-department" element={<AddDepartment/>} />
