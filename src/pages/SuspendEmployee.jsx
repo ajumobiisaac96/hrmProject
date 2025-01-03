@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Sidebar from '../components/Sidebar';
 import test from '../assets/test.png';
 import '../pages/DeactivateEmployee.css';
@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom'
 library.add(fas)
 
 const SuspendEmployee = () => {
-    const [activeSection, setActiveSection] = useState('personalInfo');
+    // const [activeSection, setActiveSection] = useState('personalInfo');
 
     return (
       <div>
