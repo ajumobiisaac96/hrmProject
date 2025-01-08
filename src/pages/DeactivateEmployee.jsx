@@ -2,8 +2,7 @@ import React from 'react';
 import Sidebar from '../components/Sidebar';
 import test from '../assets/test.png';
 import '../pages/SuspendEmployee.css';
-import ToggleButton from '../components/ToggleButton'
-
+import ToggleButton from '../components/ToggleButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom'
 
