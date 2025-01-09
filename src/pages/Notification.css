@@ -266,6 +266,7 @@
     width: 950px;
     border: none;
     height: 40px;
+    outline: none;
 }
 
 .communication-type-1 p {

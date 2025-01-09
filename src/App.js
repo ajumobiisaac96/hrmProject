@@ -24,6 +24,7 @@
   import PayrollManagement from './pages/PayrollManagement.jsx'
   import AllowanceAndContribution from './pages/AllowanceAndContribution.jsx';
   import ReportAndAnalysis from './pages/ReportAndAnalysis.jsx';
+  import AdminProfile from './pages/AdminProfile.jsx';
   import Notification from './pages/Notification.jsx';
 
   function App() {
@@ -57,6 +58,7 @@
             <Route path="/AllowanceAndContribution" element={<AllowanceAndContribution/>} />
             <Route path="/notification" element={<Notification/>} />
             <Route path="/ReportAndAnalysis" element={<ReportAndAnalysis/>} />
+            <Route path="/Profile" element={<AdminProfile/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
