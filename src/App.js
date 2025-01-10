@@ -25,7 +25,9 @@
   import AllowanceAndContribution from './pages/AllowanceAndContribution.jsx';
   import ReportAndAnalysis from './pages/ReportAndAnalysis.jsx';
   import AdminProfile from './pages/AdminProfile.jsx';
+  import OvertimeHoursTable from './pages/OvertimeHoursTable.jsx'
   import Notification from './pages/Notification.jsx';
+  import AttendancePerformanceTable from './pages/AttendancePerformanceTable.jsx'
 
   function App() {
     return (
@@ -59,6 +61,8 @@
             <Route path="/notification" element={<Notification/>} />
             <Route path="/ReportAndAnalysis" element={<ReportAndAnalysis/>} />
             <Route path="/Profile" element={<AdminProfile/>} />
+            <Route path="/ReportAndAnalysis/OvertimeHours" element={<OvertimeHoursTable/>} />
+            <Route path="/ReportAndAnalysis/AttendancePerformanceTable" element={<AttendancePerformanceTable/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

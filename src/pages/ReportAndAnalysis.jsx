@@ -7,6 +7,7 @@ import TopAttendanceAchievers from '../components/TopAttendanceAchievers';
 import ProgressBars from '../components/ProgressBars';
 import MonthlyAttendanceTrends from '../components/MonthlyAttendanceTrends';
 import './ReportAndAnalysis.css';
+import { Link } from 'react-router-dom';
 
 // Placeholder data for the line graph
 const overtimeData = {
@@ -122,7 +123,7 @@ const ReportAndAnalysis = () => {
           <TopAttendanceAchievers achievers={topAttendanceAchievers} />
         </div>
 
-        <button className="view-button">View Department Overtime Hours</button>
+        <Link to={'/ReportAndAnalysis/OvertimeHours'} ><button className="view-button" style={{background:'transparent', color:'#2E2E2E', border:'1px solid #D9D9D9', marginLeft:'600px'}} >View Department Overtime Hours</button></Link>
         
         <div className="attendance-trends">
           <div>
@@ -133,7 +134,7 @@ const ReportAndAnalysis = () => {
           </div>
         </div>
 
-        <button className="view-button">View Attendance Performance</button>
+        <Link to={'/ReportAndAnalysis/AttendancePerformanceTable'} ><button className="view-button" style={{background:'transparent', color:'#2E2E2E', border:'1px solid #D9D9D9', marginLeft:'600px'}} >View Attendance Performance</button></Link>
 
         </div>
         
