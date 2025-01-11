@@ -28,13 +28,14 @@
   import OvertimeHoursTable from './pages/OvertimeHoursTable.jsx'
   import Notification from './pages/Notification.jsx';
   import AttendancePerformanceTable from './pages/AttendancePerformanceTable.jsx'
+  import LandingPage from './pages/LandingPage.jsx';
 
   function App() {
     return (
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Navigate to="/companyregister" />}/>
+            <Route path="/" element={<Navigate to="/Landingpage" />}/>
             <Route path="/companyregister" element={<CompanyRegister />} />
             <Route path="/register" element={<HRregister />} />
             <Route path="/login" element={<HRlogin />} />
@@ -63,6 +64,7 @@
             <Route path="/Profile" element={<AdminProfile/>} />
             <Route path="/ReportAndAnalysis/OvertimeHours" element={<OvertimeHoursTable/>} />
             <Route path="/ReportAndAnalysis/AttendancePerformanceTable" element={<AttendancePerformanceTable/>} />
+            <Route path="/LandingPage" element={<LandingPage/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

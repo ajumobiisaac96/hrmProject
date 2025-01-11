@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+@import 'tailwindcss/tailwind.css';
+
+
 .logo {
     display: flex;
     justify-content: center; 
