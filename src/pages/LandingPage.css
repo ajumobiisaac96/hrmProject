@@ -4,7 +4,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFF;
+  }
+
+  .LandingPage{
+    background-color: #fff;
+    overflow-y: hidden;
   }
   
   .navbar {
@@ -17,6 +21,7 @@ body {
     position: sticky;
     top: 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
   
   .logo {
@@ -198,64 +203,115 @@ body {
   color: #6E6E6E;
 }
 
-.LandingPage-Navbar{
+.why-we-choose h1{
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.why-we-choose p{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color:#6E6E6E;
+}
+
+.why-we-choose-dev{
   padding: 2rem 10rem;
 }
 
-.LandingPage-Navbar ul{
+.cards{
   display: flex;
-  border: 1px solid #D9D9D9;
-  border-radius: 49px;
-  padding: 10px;
+  padding: 2rem 10rem;
+  cursor: pointer;
 }
 
-.LandingPage-Navbar ul li{
-  padding: 10px;
+.FAQ {
+  padding: 2rem 15rem;
+}
+
+.FAQ h1{
   font-family: Inter;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 21.78px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #2E2E2E;
 }
 
-.LandingPage-Navbar ul li:hover{
-  background-color: #007BFF;
-  border-radius: 20px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.display-nav-image .attendance, .department, .ReportAnalysis, .EmployeeManagment, .PayrollManagment, .LeaveManagment {
+.Last-side{
   display: flex;
-  padding: 2rem 10rem;  
+  align-items: center;
+  padding: 2rem 0rem 2rem 6rem;
 }
 
-.display-nav-image .attendance .left{
-  width: 483px;
-  height: 157px;
+.Last-side img{
+  width: 100%;
+  height: 406px;
+  left: 660px;
 }
 
-.display-nav-image .attendance .left h1{ 
-  font-family: inter;
-  font-weight: bold;
-  color:#2E2E2E;
+.Last-side .left-col{
+  width: 608px;
+  height: 285px;
+  top: 161px;
+  left: -5px;
+  gap: 16px;
 }
 
-.display-nav-image .attendance .left p{ 
-  font-family: inter;
-  color:#6E6E6E;
+.Last-side .left-col h1{
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38.73px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color:#2E2E2E; 
 }
 
-.display-nav-image .attendance img{
-  width: 700px;
-  height: 468.35px;
-
+.Last-side .left-col p{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #4E4E4E ;
 }
 
+.Last-side .demo-button{
+  margin-left: -1px;
+}
 
+.requestdemo{
+  background-color: #007BFF;
+  width: 100%;
+  height: 423px;
+  top: 5842px;
+  padding: 95px 205.29px 158.29px 205px;
+}
 
+.requestdemo h1{
+  font-family: Inter;
+  font-size: 106px;
+  font-weight: 600;
+  line-height: 107.06px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFF;
+}
 
 

@@ -6,16 +6,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import EmployeeIcon from '../assets/employee-icon.jpg'
 import DollarIcon from '../assets/dollar-icon.jpg'
 import TaskIcon from '../assets/leave-manangment-icon.jpg'
-import Attendance from '../assets/Attendance-LandingPage.jpg'
-import Department from '../assets/Department-LandingPage.jpg'
-import Report from '../assets/Report-LandingPage.jpg'
-import Employee from '../assets/EmployeeManagment.jpg'
-import Payroll from '../assets/PayrollManagment.jpg'
-import Leave from '../assets/LeaveManagment.jpg'
+import LandingPageNavbar from '../components/LandingPageNavbar';
+import ImageOne from '../assets/why we choose.jpg'
+import ImageTwo from '../assets/why we choose-2.jpg'
+import CardOne from '../components/CardOne'
+import CardTwo from '../components/CardTwo'
+import CardThree from '../components/CardThree'
+import FAQ from '../components/FAQ'
+import LastSlide from '../assets/LastSIDE.png'
+import Footer from '../components/Footer';
+
 
 const LandingPage = () => {
+
   return (
     <div>
+      <div className="LandingPage">
       <nav class="navbar">
         <div class="logo">
             <img src={Logo} alt="Logo" class="logo-img"/>
@@ -78,76 +84,62 @@ const LandingPage = () => {
         <h1>Streamline your HR processes with a <br /> platform designed to manage every aspect of your workforce</h1>
     </div>
 
-    <nav className='LandingPage-Navbar' >
-      <ul>
-        <li>Attendance and Tracking</li>
-        <li>Department</li>
-        <li>Report and Analysis</li>
-        <li>Employee Management</li>
-        <li>Payroll Management</li>
-        <li>Leave Management</li>
-      </ul>
-    </nav>
+   <div>
+    <LandingPageNavbar/>
+   </div>
 
-    <div className="display-nav-image">
-        <div className="attendance">
-          <div className="left">
-            <h1>Attendance and Tracking</h1>
-            <p>Monitor and record employee attendance seamlessly with precision. Clock-ins, track hours worked, and reduce manual errors, ensuring accurate and up-to-date attendance records. Perfect for managing in-office, remote, and hybrid employees with ease.</p>
-          </div>
-          <div className="right">
-            <img src={Attendance} alt="" />
-          </div>
-        </div>
-        <div className="department">
-          <div className="left">
-            <h1>Department</h1>
-            <p>organize and structure your workforce into manageable departments. Assign roles and track departmental attendance. A better -organized workforce leads to increased productivity and accountability</p>
-          </div>
-          <div className="right">
-            <img src={Department} alt="" />
-          </div>
-        </div>
-        <div className="ReportAnalysis">
-          <div className="left">
-            <h1>Report and Analysis</h1>
-            <p>Make data-driven decisions with robust reporting tools. Get detailed insights intoo workforce attendance patterns, payroll summaries, and eave trends. Tailor reports to your needs and export them with ease for further analysis</p>
-          </div>
-          <div className="right">
-            <img src={Report} alt="" />
-          </div>
-        </div>
-        <div className="EmployeeManagment">
-          <div className="left">
-            <h1>Employee Managment</h1>
-            <p>Centralize all employee information in one secure platform. From personal details and employment data history to attendance records, access everything you need in just a few clicks. keep your data organized,secure and always up-to-date.</p>
-          </div>
-          <div className="right">
-            <img src={Employee} alt="" />
-          </div>
-        </div>
-        <div className="PayrollManagment">
-          <div className="left">
-            <h1>Payroll Managment</h1>
-            <p>Simplify the complexities of payroll with automated salary calculations. Handle taxes, deductions, and allownaces efortlessly, while ensuring comliance with local regulations. save time, minimize errors, and deliver accurate paychecks everytime.</p>
-          </div>
-          <div className="right">
-            <img src={Payroll} alt="" />
-          </div>
-        </div>
-        <div className="LeaveManagment">
-          <div className="left">
-            <h1>Leave Managment</h1>
-            <p>Empower your wworkforce witha smooth leave manangment system. Enable employees to submit leave request, view balances, and check approvals instantly. streamline leave schelduling to prevent conflicts and maintain productivity.</p>
-          </div>
-          <div className="right">
-            <img src={Leave} alt="" />
-          </div>
-        </div>
+    <div className="why-we-choose">
+      <h1>Why Choose Our HRMS</h1>
+      <p>Manage your workforce with ease, precision, and clarity.</p>
+    </div>
+
+    <div className='why-we-choose-dev'>
+      <img src={ImageOne} alt="" />
+      <img src={ImageTwo} alt="" />
+    </div>
+
+    <div className="why-we-choose">
+      <h1>Get started in Three steps</h1>
+      <p>Set up your HRMS and simplify team management.</p>
+    </div>
+
+    <div className="cards">
+      <CardOne/>
+      <CardTwo/>
+      <CardThree/>
+    </div>
+
+    <div className="FAQ">
+      <h1>Frequently Asked Questions</h1>
+      <FAQ/>
+    </div>
+
+    <div className="Last-side">
+      <div className="left-col">
+        <h1>Streamline Your HR Operations with Proxima Hr </h1>
+        <p>Proxima Hr is a cutting-edge Human Resource Management System that revolutionizes workforce management. It empowers HR professionals to handle complex tasks effortlessly, from payroll to attendance tracking. By centralizing data , it saves time and reduces errors, allowing focus on building a productive workforce.</p>
+        <button class="demo-button">
+            Request Demo
+            <span class="arrow-icon">➔</span>
+        </button>
+      </div>
+      <div className="right-col">
+        <img src={LastSlide} alt="" />
+      </div>
+    </div>
+
+      <div className="requestdemo">
+        <h1>Request a Demo <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></h1>
+      </div>
+    </div>
+
+    <div className="footer">
+      <Footer/>
     </div>
     
 
-    </div>
+  </div>
+      
   )
 }
 
