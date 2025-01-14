@@ -16,28 +16,24 @@ const AddDepartment = () => {
           <div className="main-dashboard">
             <Sidebar/>
             <div className="dashboard">
-              <div className="slide-one-1">
-                <div className="slide-one-1">
-                  <div className="name">
-                    <h5>Joseph Dooley</h5>
-                    <h6>Good Morning</h6>
-                  </div> 
-                </div>
-                <div className="slide-one-2-1">
-                  {/* <div className="search">
-                    <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" className="glass-icon" /><input type="text" placeholder='Search' />
-                  </div> */}
-    
-                  <div className="notification">
-                    <FontAwesomeIcon icon="fa-solid fa-bell" />
-                    <h6>6</h6>
-                  </div>
-    
-                  <div className="user-profile">
-                  <img src={test} alt="My profile" className ="My-profile" />
-                  </div>
-                </div> 
+            <div className="slide-one-1">
+            <div className="slide-one-1">
+              <div className="name">
+                <h5>Joseph Dooley</h5>
+                <h6>Good Morning</h6>
+              </div> 
+            </div>
+            <div className="slide-one-2-1">
+              <div className="notification">
+                <FontAwesomeIcon icon="fa-solid fa-bell" />
+                <h6>6</h6>
               </div>
+
+              <div className="user-profile">
+                <img src={test} alt="My profile" className="My-profile" />
+              </div>
+            </div> 
+          </div>
     
               <hr className="horizontal" />
     

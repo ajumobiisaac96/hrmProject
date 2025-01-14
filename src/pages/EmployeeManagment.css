@@ -44,6 +44,26 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #2E2E2E;
+    margin-bottom: -200px !important;
+}
+
+.btn-8 button{
+  width: 88px;
+  height: 40px;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  background-color: #F8F8F8;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #2E2E2E;
+  margin-bottom: -200px !important;
 }
 
 .btn button{
@@ -191,73 +211,6 @@
     background-color: #DCFCE8;
     color: #22C55E;
 }
-/* .btn-3 button{
-    width: 109px;
-    height: 36px;
-    top: 256px;
-    left: 129px;
-    padding: 4px;
-    gap: 4px;
-    border-radius: 8px;
-    border: 1px solid #007BFF;
-    color: #007BFF;
-    background-color: #FFFFFF;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-}
-
-.btn-3 button:hover{
-    background-color: #007BFF;
-    color: #FFFFFF;
-}
-
-.dropdownstyle{
-    position: relative;
-    background: white;
-    border: 1px solid #4E4E4E;
-    padding: 10px;
-    width: 150px;
-    border-radius: 10px;
-  };
-
-  .dropdownstyle p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-
-  .suspend-menu .btn-4{
-    position: absolute;
-    font-size: 12px;
-    top: 300px;
-    width: 100px;
-    height: 30px;
-    right: 280px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    color: #007BFF;
-  }
-
-  .suspend-menu .btn-4:hover{
-    background-color: #007BFF;
-    color: #FFFFFF;
-  }
-
-.three-dots{
-    margin-left: 190px;
-   position: fixed;
-   top: 0;
-} */
 
 .div-1 {
     display: flex;
@@ -302,6 +255,11 @@
   .suspend-menu button:hover {
     background-color: #7e7c7c; /* Slightly darker red for hover effect */
     color: #F8F8F8;
+  }
+
+  .btn-2 {
+    border: none !important;
+    background-color: #fff!important;
   }
   
   .btn-2 .btn-5{

@@ -304,3 +304,11 @@ color: #4E4E4E;
 .div-2 .btn button{
     width: 250px !important;
 }
+
+.btn-1{
+    border: none !important;
+}
+
+.btn-1 button{
+    margin-top: -9px !important;
+}

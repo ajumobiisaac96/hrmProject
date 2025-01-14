@@ -43,7 +43,7 @@ const AdminProfile = () => {
         <Sidebar />
       
         <div className="dashboard">
-          <div className="slide-one-1">
+        <div className="slide-one-1">
             <div className="slide-one-1">
               <div className="name">
                 <h5>Joseph Dooley</h5>

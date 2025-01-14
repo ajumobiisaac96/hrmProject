@@ -96,6 +96,7 @@
     display: flex;
     width: 350px;
     justify-content: space-between;
+    margin-left: -120px;
 }
 
 .notification{
@@ -121,6 +122,7 @@
 
 .user-profile{
     margin-top: 5px;
+    width: 100px;
 }
 
 .horizontal{
