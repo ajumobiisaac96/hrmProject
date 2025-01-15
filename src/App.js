@@ -29,6 +29,8 @@
   import Notification from './pages/Notification.jsx';
   import AttendancePerformanceTable from './pages/AttendancePerformanceTable.jsx'
   import LandingPage from './pages/LandingPage.jsx';
+  import EmployeeDashboard from './EmployeePages/EmployeeSide/pages/EmployeeDashboard.jsx'
+
 
   function App() {
     return (
@@ -65,6 +67,7 @@
             <Route path="/ReportAndAnalysis/OvertimeHours" element={<OvertimeHoursTable/>} />
             <Route path="/ReportAndAnalysis/AttendancePerformanceTable" element={<AttendancePerformanceTable/>} />
             <Route path="/LandingPage" element={<LandingPage/>} />
+            <Route path="/EmployeeDashboard" element={<EmployeeDashboard/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
