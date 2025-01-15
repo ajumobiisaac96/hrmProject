@@ -6,12 +6,13 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom'
+import AttendanceLeaveOverview from '../components/AttendanceLeaveOverview';
 
 library.add(fas);
 
 const Profile = () => {
   const [activeSection, setActiveSection] = useState('personalInfo');
-
+  
   return (
     <div>
       <div className="main-dashboard">
@@ -384,6 +385,16 @@ const Profile = () => {
             </div>
             
           </div>
+        
+          
+                            {/* Attendance Leave */}
+                            <div
+            style={{ display: activeSection === 'attendanceLeave' ? 'block' : 'none' }}
+          >
+            <AttendanceLeaveOverview />
+          </div>
+        
+
 
         </div>
       </div>

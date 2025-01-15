@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {Link} from 'react-router-dom';
+import UserNavbar from '../components/UserNavbar';
 
 library.add(fas);
 
@@ -16,25 +17,7 @@ const AddDepartment = () => {
           <div className="main-dashboard">
             <Sidebar/>
             <div className="dashboard">
-            <div className="slide-one-1">
-            <div className="slide-one-1">
-              <div className="name">
-                <h5>Joseph Dooley</h5>
-                <h6>Good Morning</h6>
-              </div> 
-            </div>
-            <div className="slide-one-2-1">
-              <div className="notification">
-                <FontAwesomeIcon icon="fa-solid fa-bell" />
-                <h6>6</h6>
-              </div>
-
-              <div className="user-profile">
-                <img src={test} alt="My profile" className="My-profile" />
-              </div>
-            </div> 
-          </div>
-    
+              <UserNavbar/>
               <hr className="horizontal" />
     
               <div className="dashboard-details">
