@@ -31,6 +31,9 @@
   import LandingPage from './pages/LandingPage.jsx';
   import EmployeeDashboard from './EmployeePages/EmployeeSide/pages/EmployeeDashboard.jsx'
   import EmployeeAttendance from './EmployeePages/EmployeeSide/pages/EmployeeAttendance.jsx'
+  import EmployeeLeave from './EmployeePages/EmployeeSide/pages/EmployeeLeave.jsx'
+  import NewLeaveRequest from './EmployeePages/EmployeeSide/pages/NewLeaveRequest.jsx'
+  import ProfileDashboard from './EmployeePages/EmployeeSide/pages/ProfileDashboard.jsx'
 
 
   function App() {
@@ -70,6 +73,9 @@
             <Route path="/LandingPage" element={<LandingPage/>} />
             <Route path="/EmployeeDashboard" element={<EmployeeDashboard/>} />
             <Route path="/EmployeeAttendance" element={<EmployeeAttendance/>} />
+            <Route path="/EmployeeLeave" element={< EmployeeLeave/>} />
+            <Route path="/EmployeeLeave/NewLeaveRequest" element={< NewLeaveRequest/>} />
+            <Route path="/ProfileDashboard" element={< ProfileDashboard/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

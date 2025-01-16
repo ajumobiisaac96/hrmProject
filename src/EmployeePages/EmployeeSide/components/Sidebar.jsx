@@ -15,8 +15,8 @@ const Sidebar = () => {
   const menuItems = [
     { name: "Dashboard", icon: "fa-house", to: "/EmployeeDashboard" },
     { name: "Attendance & Tracking", icon: "fa-clipboard-user", to: "/EmployeeAttendance" },
-    { name: "Leave Request", icon: "fa-calendar", to: "/LeaveManagment" },
-    { name: "Profile", icon: "fa-user", to: "/Profile" },
+    { name: "Leave Request", icon: "fa-calendar", to: "/EmployeeLeave" },
+    { name: "Profile", icon: "fa-user", to: "ProfileDashboard" },
     { name: "Logout", icon: "fa-right-from-bracket", to: "/login", className :"logout"},
   ];
 
