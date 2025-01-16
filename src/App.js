@@ -30,6 +30,7 @@
   import AttendancePerformanceTable from './pages/AttendancePerformanceTable.jsx'
   import LandingPage from './pages/LandingPage.jsx';
   import EmployeeDashboard from './EmployeePages/EmployeeSide/pages/EmployeeDashboard.jsx'
+  import EmployeeAttendance from './EmployeePages/EmployeeSide/pages/EmployeeAttendance.jsx'
 
 
   function App() {
@@ -68,6 +69,7 @@
             <Route path="/ReportAndAnalysis/AttendancePerformanceTable" element={<AttendancePerformanceTable/>} />
             <Route path="/LandingPage" element={<LandingPage/>} />
             <Route path="/EmployeeDashboard" element={<EmployeeDashboard/>} />
+            <Route path="/EmployeeAttendance" element={<EmployeeAttendance/>} />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

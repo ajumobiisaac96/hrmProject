@@ -13,8 +13,8 @@ const Sidebar = () => {
   const location = useLocation(); // Get the current path
 
   const menuItems = [
-    { name: "Dashboard", icon: "fa-house", to: "/Dashboard" },
-    { name: "Attendance & Tracking", icon: "fa-clipboard-user", to: "/attendance-and-tracking" },
+    { name: "Dashboard", icon: "fa-house", to: "/EmployeeDashboard" },
+    { name: "Attendance & Tracking", icon: "fa-clipboard-user", to: "/EmployeeAttendance" },
     { name: "Leave Request", icon: "fa-calendar", to: "/LeaveManagment" },
     { name: "Profile", icon: "fa-user", to: "/Profile" },
     { name: "Logout", icon: "fa-right-from-bracket", to: "/login", className :"logout"},
