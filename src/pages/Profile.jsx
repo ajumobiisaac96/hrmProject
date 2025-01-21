@@ -352,10 +352,10 @@ const Profile = () => {
                     <h2>Attendance Rate</h2>
                     <h3>Monthly Attendance <span>95%</span> </h3>
                     <p className='Progress-bar-grey'></p>
-                    <h1 className='Progress-bar-green'></h1>
+                    <h1 className='Progress-bar-green'><span></span></h1>
                     <h3>Year-to-Date Attendance<span>92%</span> </h3>
                     <p className='Progress-bar-grey'></p>
-                    <h1 className='Progress-bar-green'></h1>
+                    <h1 className='Progress-bar-green'><span></span></h1>
                   </div>
                   <div>
                     <h2>Leave Balance</h2>

@@ -192,13 +192,13 @@ const DummyTable = () => {
                   <td style={tableCellStyle}>{row.absences}</td>
                   <td style={tableCellStyle}>{row.totalLogged}</td>
                   <td style={tableCellStyle}>
-                    <a
+                    <p
                       href="#"
                       onClick={() => handleViewDetails(row.department, row.employees)}
                       style={viewButtonStyle}
                     >
                       View
-                    </a>
+                    </p>
                   </td>
                 </tr>
               ))}

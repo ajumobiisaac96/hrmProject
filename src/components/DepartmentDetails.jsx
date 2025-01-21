@@ -86,13 +86,12 @@ const DepartmentDetails = ({ department, employees }) => {
               <td style={tableCellStyle}>{employee.absences}</td>
               <td style={tableCellStyle}>{employee.totalLogged}</td>
               <td style={tableCellStyle}>
-                <a
-                  href="#"
+                <p
                   onClick={() => handleViewClick(employee)}
                   style={viewButtonStyle}
                 >
                   View
-                </a>
+                </p>
               </td>
             </tr>
           ))}
