@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 import Sidebar from '../components/Sidebar'
 import test from '../assets/test.png'
 import '../pages/SearchEmployee.css'

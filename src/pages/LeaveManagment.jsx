@@ -194,6 +194,10 @@ const LeaveManagment = () => {
                 ))}
               </tbody>
             </table>
+
+            <button onClick={toggleMonthDropdown} style={{display:'none'}}  >Select Month</button>
+
+
           </div>
         </div>
       </div>
@@ -243,5 +247,7 @@ const rejectButtonStyle = {
   backgroundColor: '#F8F8F8',
   color: '#2E2E2E',
 };
+
+
 
 export default LeaveManagment;
