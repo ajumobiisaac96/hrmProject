@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 
-@import 'tailwindcss/tailwind.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 
 .logo {

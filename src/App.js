@@ -1,3 +1,4 @@
+  import React from 'react';
   import './styles/custom.css';
   import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
   import HRregister from './pages/auth/HRregister.jsx';
