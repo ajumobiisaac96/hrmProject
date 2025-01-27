@@ -15,6 +15,10 @@ import CardThree from '../components/CardThree'
 import FAQ from '../components/FAQ'
 import LastSlide from '../assets/LastSIDE.png'
 import Footer from '../components/Footer';
+import {Link} from 'react-router-dom'
+
+
+
 
 
 const LandingPage = () => {
@@ -23,34 +27,34 @@ const LandingPage = () => {
     <div>
       <div className="LandingPage">
       <nav class="navbar">
-        <div class="logo">
-            <img src={Logo} alt="Logo" class="logo-img"/>
+        <div class="logo" >
+            <a href="#home"><img src={Logo} alt="Logo" class="logo-img"/></a>
             <span class="logo-text">Proxima HR</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#hero-section">Features</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">Benefits</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
-        <button class="demo-button">
+        <Link to={'/companyregister'} ><button class="demo-button" style={{textDecoration: 'none'}}>
             Request Demo
             <span class="arrow-icon">➔</span>
-        </button>
+        </button></Link>
     </nav>
 
     {/* hero section */}
 
-    <div className="hero-section">
+    <div className="hero-section" id='home'>
         <h1>Stop Wasting Time on Manual HR Tasks <br />
         <span>Simplify</span> Management</h1>
-        <p>Streamline attendance, payroll, leave tracking, and reporting to save time and boost productivity</p>
-        <button>Request Demo <FontAwesomeIcon icon="fa-solid fa-arrow-right" /> </button>
+        <p>Streamline attendance, payroll, leave tracking, and reporting to save time and <br /> boost productivity</p>
+        <Link to={'/companyregister'} ><button className='hero-btn' >Request Demo <FontAwesomeIcon icon="fa-solid fa-arrow-right" /> </button></Link>
         <img src={HeroImage} alt="" />
     </div>
 
 
-      <div className='sub-info-h1'>
+      <div className='sub-info-h1' style={{lineHeight:'70px', fontSize:'22px'}} >
         <h1>Everything You Need to Manage Your Workforce</h1>
       </div>
 
@@ -76,19 +80,19 @@ const LandingPage = () => {
 
     </div>
 
-    <div className='sub-info-h1'>
+    <div className='sub-info-h1' style={{lineHeight:'50px', fontSize:'22px'}} >
         <h1>Your Complete Workforce <br /> Management Solution</h1>
     </div>
 
-    <div className='sub-info-p'>
-        <h1>Streamline your HR processes with a <br /> platform designed to manage every aspect of your workforce</h1>
+    <div className='sub-info-p' id="features" style={{lineHeight:'30px'}} >
+        <h1>Streamline your HR processes with a platform <br /> designed to manage every aspect of your workforce</h1>
     </div>
 
-   <div>
+   <div >
     <LandingPageNavbar/>
    </div>
 
-    <div className="why-we-choose">
+    <div className="why-we-choose" id='benefits'>
       <h1>Why Choose Our HRMS</h1>
       <p>Manage your workforce with ease, precision, and clarity.</p>
     </div>
@@ -103,13 +107,13 @@ const LandingPage = () => {
       <p>Set up your HRMS and simplify team management.</p>
     </div>
 
-    <div className="cards">
+    <div className="cards" id="how-it-works">
       <CardOne/>
       <CardTwo/>
       <CardThree/>
     </div>
 
-    <div className="FAQ">
+    <div className="FAQ" id='faq'>
       <h1>Frequently Asked Questions</h1>
       <FAQ/>
     </div>
@@ -118,19 +122,19 @@ const LandingPage = () => {
       <div className="left-col">
         <h1>Streamline Your HR Operations with Proxima Hr </h1>
         <p>Proxima Hr is a cutting-edge Human Resource Management System that revolutionizes workforce management. It empowers HR professionals to handle complex tasks effortlessly, from payroll to attendance tracking. By centralizing data , it saves time and reduces errors, allowing focus on building a productive workforce.</p>
-        <button class="demo-button">
+        <Link to={'/companyregister'} ><button class="demo-button">
             Request Demo
             <span class="arrow-icon">➔</span>
-        </button>
+        </button></Link>
       </div>
       <div className="right-col">
         <img src={LastSlide} alt="" />
       </div>
     </div>
 
-      <div className="requestdemo">
-        <h1>Request a Demo <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></h1>
-      </div>
+    <Link to={'/companyregister'} ><div className="requestdemo">
+      <h1>Request a Demo <FontAwesomeIcon icon="fa-solid fa-arrow-right" /></h1>
+      </div></Link>
     </div>
 
     <div className="footer">

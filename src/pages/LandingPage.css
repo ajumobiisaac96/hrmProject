@@ -1,4 +1,4 @@
-/* Base Styling */
+Base Styling
 body {
     font-family: 'inter';
     margin: 0;
@@ -6,9 +6,13 @@ body {
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
   .LandingPage{
     background-color: #fff;
-    overflow-y: hidden;
   }
   
   .navbar {
@@ -17,11 +21,12 @@ body {
     align-items: center;
     background-color: #fff;
     color: #2E2E2E;
-    padding: 1rem 10rem;
+    /* padding: 1rem 10rem; */
     position: sticky;
     top: 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    padding: 1rem 5%;
   }
   
   .logo {
@@ -68,8 +73,9 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    width: 200px;
     text-align: center !important;
+    text-decoration: none;
+    width: 150px;
   }
 
   .demo-button:hover{
@@ -83,7 +89,12 @@ body {
   .hero-section{
     background-color: #fff;
     text-align: center;
-    padding: 5rem 10rem;
+    padding: 5rem 5%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 5rem 10rem; */
   }
   
   .hero-section h1{
@@ -120,7 +131,7 @@ body {
     margin-top: 10px;
   }
 
-  .hero-section button{
+  .hero-section .hero-btn{
     width: 302px;
     height: 56px;
     padding: 0px;
@@ -133,14 +144,31 @@ body {
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
+    background-color: #007BFF;
+    color: #FFF;
+    margin-top: 10px;
+    border: 1px solid #007BFF ;
   }
 
+.hero-section button:hover{
+  background-color: #FFF;
+  border: 1px solid #007BFF;
+  color: #007BFF;
+}
+
+.hero-section img {
+  max-width: 100%; /* Ensure the image scales with the container */
+  height: auto;
+}
+
+
   .sub-info{
-    background-color: #fff;
-    padding: 2rem 10rem;
     display: flex;
-    justify-items: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Center sub-info items */
+    align-items: center;
+    gap: 2rem; /* Add space between items */
+    padding: 2rem 5%;
   }
 
   .sub-info-h1{
@@ -157,9 +185,9 @@ body {
   }
 
   .sub-info .sub-info-div{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    width: 100%; /* Default to full width */
+    max-width: 300px; /* Limit width for individual divs */
+    margin: 1rem; /* Add margin for spacing */
   }
 
   .sub-info .sub-info-div img{
@@ -225,13 +253,25 @@ body {
 }
 
 .why-we-choose-dev{
-  padding: 2rem 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center images */
+  align-items: center;
+  gap: 2rem; /* Add space between images */
+  padding: 2rem 5%;
+}
+
+.why-we-choose-dev img {
+  max-width: 100%; /* Ensure images scale */
+  height: auto;
 }
 
 .cards{
   display: flex;
-  padding: 2rem 10rem;
-  cursor: pointer;
+  /* flex-wrap: wrap; */
+  justify-content: center; /* Center all cards */
+  gap: 2rem; /* Add spacing */
+  padding: 2rem 5%;
 }
 
 .FAQ {
@@ -251,14 +291,17 @@ body {
 
 .Last-side{
   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center; /* Center content */
   align-items: center;
-  padding: 2rem 0rem 2rem 6rem;
+  gap: 2rem; /* Add spacing */
+  padding: 2rem 5%;
+  text-align: center;
 }
 
 .Last-side img{
-  width: 100%;
-  height: 406px;
-  left: 660px;
+  max-width: 100%; /* Scale image */
+  height: auto;
 }
 
 .Last-side .left-col{
@@ -301,6 +344,7 @@ body {
   height: 423px;
   top: 5842px;
   padding: 95px 205.29px 158.29px 205px;
+  cursor: pointer;
 }
 
 .requestdemo h1{

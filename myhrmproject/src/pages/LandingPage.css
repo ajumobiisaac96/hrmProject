@@ -73,8 +73,9 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    width: 200px;
     text-align: center !important;
+    text-decoration: none;
+    width: 150px;
   }
 
   .demo-button:hover{
@@ -146,6 +147,7 @@ body {
     background-color: #007BFF;
     color: #FFF;
     margin-top: 10px;
+    border: 1px solid #007BFF ;
   }
 
 .hero-section button:hover{
